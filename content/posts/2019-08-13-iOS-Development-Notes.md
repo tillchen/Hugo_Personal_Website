@@ -44,17 +44,17 @@ tags = ["Mobile Development"]
 
 ## View Controller Lifecycle:
 
-1. ![Lifecycle image]({{https://tillchen.com}}/images/ios_lifecycle.png)
+1. ![Lifecycle image](/images/ios_lifecycle.png)
 
 2. Detailed methods: <https://guides.codepath.com/ios/View-Controller-Lifecycle>
 
 ## MVC Architecture
 
-1. ![MVC image]({{https://tillchen.com}}/images/mvc.png)
+1. ![MVC image](/images/mvc.png)
 
 ## Project Organization
 
-1. Example: ![project organization image]({{https://tillchen.com}}/images/ios_project_organization.jpeg)
+1. Example: ![project organization image](/images/ios_project_organization.jpeg)
 
 ## References
 

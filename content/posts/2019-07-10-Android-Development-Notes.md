@@ -305,7 +305,7 @@ tags = ["Mobile Development"]
 5. Activity lifecycle:
     * When we implement them (`onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`, `onRestart()`, `onDestroy()`), we must call the super class methods.
     * `onResume()` is called when the activity is started OR resumed; `onPause()` is called when the activity is paused OR stopped.
-    * ![Activity lifecycle]({{https://tillchen.com}}/images/activity_lifecycle.png)
+    * ![Activity lifecycle](/images/activity_lifecycle.png)
 
 6. [Defining launch modes](https://developer.android.com/guide/components/activities/tasks-and-back-stack#TaskLaunchModes) (singleTop, singleTask, etc.)
 
@@ -313,7 +313,7 @@ tags = ["Mobile Development"]
 
 1. Fragment lifecycle:
 
-    ![Fragment lifecycle]({{https://tillchen.com}}/images/fragment_lifecycle.png)
+    ![Fragment lifecycle](/images/fragment_lifecycle.png)
 
 2. Example:
 

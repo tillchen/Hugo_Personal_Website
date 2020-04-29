@@ -59,8 +59,8 @@ tags = ["Software Engineering"]
 5. In Java, Observable is a class, which means we have to subclass it.
 
 6. UML:
-   * ![Observer]({{https://tillchen.com}}/images/observer.png)
-   * Example: ![Observer example]({{https://tillchen.com}}/images/observer_example.png)
+   * ![Observer](/images/observer.png)
+   * Example: ![Observer example](/images/observer_example.png)
 
 ## The Decorator Pattern
 
@@ -75,8 +75,8 @@ tags = ["Software Engineering"]
 5. The decorator pattern attaches additional responsibilities to an object dynamically.
 
 6. UML:
-   * ![Decorator]({{https://tillchen.com}}/images/decorator.png)
-   * Example: ![Decorator example]({{https://tillchen.com}}/images/decorator_example.png)
+   * ![Decorator](/images/decorator.png)
+   * Example: ![Decorator example](/images/decorator_example.png)
 
 7. `java.io` is mainly using the decorator pattern.
 
@@ -85,8 +85,8 @@ tags = ["Software Engineering"]
 1. The factory method pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
 2. UML:
-   * ![Factory]({{https://tillchen.com}}/images/factory.png)
-   * Example: ![Factory example]({{https://tillchen.com}}/images/factory_example.png)
+   * ![Factory](/images/factory.png)
+   * Example: ![Factory example](/images/factory_example.png)
 
 3. **The dependency inversion principle**: Depend upon abstractions. Do not depend upon concrete classes. High-level components should not depend on low-level components; rather, they should both depend on abstractions.
     * No variables should hold a reference to a concrete class.
@@ -116,15 +116,15 @@ tags = ["Software Engineering"]
 1. The command pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests and support undoable operations.
 
 2. UML:
-   * ![Command]({{https://tillchen.com}}/images/command.png)
+   * ![Command](/images/command.png)
 
 ## The Adapter Pattern
 
 1. The adapter pattern converts the interface of a class into another interface the clients expect. It lets classes work together that couldn't otherwise because of incompatible interfaces.
 
 2. UML:
-   * ![Adapter1]({{https://tillchen.com}}/images/adapter1.png)
-   * ![Adapter2]({{https://tillchen.com}}/images/adapter2.png)
+   * ![Adapter1](/images/adapter1.png)
+   * ![Adapter2](/images/adapter2.png)
 
 ## The Facade Pattern
 
