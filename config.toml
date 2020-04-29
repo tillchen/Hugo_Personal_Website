@@ -1,0 +1,100 @@
+baseurl = "https://tillchen.com"
+title = "Tianyao Chen"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "tillchen"
+disablePathToLower = true
+googleAnalytics = "UA-139593886-1"
+
+[params]
+    author = "Tianyao Chen"
+    info = "Mobile (Android & iOS) Engineer. Exploring Web Backend, ML, and Data Science."
+    description = "Tianyao Chen's personal website"
+    keywords = "Tianyao Chen, Till Chen, tech, software, AI, ML"
+    avatarurl = "images/resume_photo.jpeg"
+
+    favicon_32 = "/images/favicon-32x32.png"
+    favicon_16 = "/images/favicon-16x16.png"
+
+    footercontent = "Sharing thoughts on Computer Science, Software Engineering, AI, Machine Learning, and Data Science."
+
+    hideFooter = false
+    hidecredits = false
+    hidecopyright = false
+
+    rtl = false
+
+    math = true
+    custom_css = []
+
+    dateformat = "January 2, 2006"
+    colorscheme = "auto"
+
+
+[taxonomies]
+    tag = "tags"
+
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/tillchen/"
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin fa-2x"
+    weight = 2
+    url = "https://www.linkedin.com/in/tillchen/"
+[[params.social]]
+    name = "Stack Overflow"
+    icon = "fab fa-stack-overflow fa-2x"
+    weight = 3
+    url = "https://stackoverflow.com/users/11674859/tianyao-chen"
+[[params.social]]
+    name = "Goodreads"
+    icon = "fab fa-goodreads fa-2x"
+    weight = 4
+    url = "https://www.goodreads.com/user/show/70012245-tianyao-chen"
+
+# Menu links
+[[menu.main]]
+    name = "About"
+    weight = 1
+    url  = "/about/"
+[[menu.main]]
+    name = "Blog"
+    weight = 2
+    url = "/posts/"
+[[menu.main]]
+    name = "Tags"
+    weight = 3
+    url = "/tags/"
+[[menu.main]]
+    name = "Projects"
+    weight = 4
+    url = "/projects/"
+[[menu.main]]
+    name = "Skills"
+    weight = 5
+    url = "/skills/"
+[[menu.main]]
+    name = "Testimonials"
+    weight = 6
+    url = "/testimonials/"
+[[menu.main]]
+    name = "Resume"
+    weight = 7
+    url = "/pdfs/Tianyao_Chen_resume.pdf"
+[[menu.main]]
+    name = "Contact"
+    weight = 8
+    url = "/contact/"
