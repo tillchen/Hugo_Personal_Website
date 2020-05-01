@@ -6,7 +6,8 @@ description = "Some notes for design patterns"
 tags = ["Software Engineering"]
 +++
 
-* [Basics](#basics)
+* [Principles](#principles)
+* [The Strategy Pattern](#the-strategy-pattern)
 * [The Observer Pattern](#the-observer-pattern)
 * [The Decorator Pattern](#the-decorator-pattern)
 * [The Factory Pattern](#the-factory-pattern)
@@ -18,10 +19,10 @@ tags = ["Software Engineering"]
 * [The State Pattern](#the-state-pattern)
 * [The Proxy Pattern](#the-proxy-pattern)
 * [Model-View-Controller](#model-view-controller)
-* [Design Patterns](#design-patterns)
+* [Design Pattern Categories](#design-pattern-categories)
 * [References](#references)
 
-## Basics
+## Principles
 
 1. Identify the varying parts and separate them from the invariant.
 
@@ -35,7 +36,28 @@ tags = ["Software Engineering"]
 
 3. Favor composition over inheritance. HAS-A can be better than IS-A.
 
-4. The strategy pattern enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
+4. SOLID:
+    * Single responsibility: a class should have only one reason to change.
+    * Open-closed: classes should be open for extension, but closed for modification.
+    * Liskov Substitution: objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program
+    * Interface Segregation: many client-specific interfaces are better than one general-purpose interface.
+    * Dependency inversion: depend upon abstractions. Do not depend upon concrete classes. High-level components should not depend on low-level components; rather, they should both depend on abstractions.
+        * No variables should hold a reference to a concrete class.
+        * No class should derive from a concrete class.
+
+5. Loose coupling: minimize the interdependency between objects.
+
+6. Design by contract: preconditions, postconditions, and invariants.
+
+7. Principle of Least Knowledge aka (Law of Demeter): talk only to your immediate friends.
+
+8. The Hollywood Principle (aka. Inversion of Control): (High-level components) Don't call us, we'll call you (low-level components).
+
+9. Tell-Don't-Ask: A->B  instead of B->A->B for data.
+
+## The Strategy Pattern
+
+1. The strategy pattern enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
 
 ## The Observer Pattern
 
@@ -43,9 +65,7 @@ tags = ["Software Engineering"]
 
 2. It defines a one-to-many dependency. When the subject changes, all dependents are notified.
 
-3. This enables loose coupling, which minimizes the interdependency between objects.
-
-4. In Java, we can use the built-in Observable - Observer superclasses.
+3. In Java, we can use the built-in Observable - Observer superclasses.
 
     ```java
     // extends Observable
@@ -56,29 +76,33 @@ tags = ["Software Engineering"]
     observable.addObserver(this);
     ```
 
-5. In Java, Observable is a class, which means we have to subclass it.
+4. In Java, Observable is a class, which means we have to subclass it.
 
-6. UML:
+5. UML:
    * ![Observer](/images/observer.png)
    * Example: ![Observer example](/images/observer_example.png)
 
+6. Used principles:
+    * Loose coupling.
+
 ## The Decorator Pattern
 
-1. **The open-closed principle**: classes should be open for extension, but closed for modification.
+1. Decorators have the same supertype as the object they decorate.
 
-2. Decorators have the same supertype as the object they decorate.
+2. You can use one or more decorators to wrap (HAS-A) an object.
 
-3. You can use one or more decorators to wrap (HAS-A) an object.
+3. The decorator adds its own behavior either before and/or after delegating to the object it decorates to do the rest of the job.
 
-4. The decorator adds its own behavior either before and/or after delegating to the object it decorates to do the rest of the job.
+4. The decorator pattern attaches additional responsibilities to an object dynamically.
 
-5. The decorator pattern attaches additional responsibilities to an object dynamically.
-
-6. UML:
+5. UML:
    * ![Decorator](/images/decorator.png)
    * Example: ![Decorator example](/images/decorator_example.png)
 
-7. `java.io` is mainly using the decorator pattern.
+6. `java.io` is mainly using the decorator pattern.
+
+7. Used principles:
+    * Open-closed.
 
 ## The Factory Pattern
 
@@ -88,11 +112,10 @@ tags = ["Software Engineering"]
    * ![Factory](/images/factory.png)
    * Example: ![Factory example](/images/factory_example.png)
 
-3. **The dependency inversion principle**: Depend upon abstractions. Do not depend upon concrete classes. High-level components should not depend on low-level components; rather, they should both depend on abstractions.
-    * No variables should hold a reference to a concrete class.
-    * No class should derive from a concrete class.
+3. The abstract factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-4. The abstract factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+4. Used principles:
+    * Dependency inversion.
 
 ## The Singleton Pattern
 
@@ -130,7 +153,8 @@ tags = ["Software Engineering"]
 
 1. The facade pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 
-2. **Principle of Least Knowledge**: talk only to your immediate friends.
+2. Used principles:
+    * Least knowledge.
 
 ## The Template Method Pattern
 
@@ -154,9 +178,9 @@ tags = ["Software Engineering"]
     }
     ```
 
-2. **The Hollywood Principle (aka. Inversion of Control)**: (High-level components) Don't call us, we'll call you (low-level components).
-
-3. **Single responsibility:**: a class should have only one reason to change.
+2. Used principles:
+    * Inversion of control.
+    * Single responsibility.
 
 ## The State Pattern
 
@@ -179,13 +203,14 @@ tags = ["Software Engineering"]
     * the composite pattern: the view is a composite of GUI components.
     * the observer pattern: the model is the observable, and the view & controller are observers.
 
-## Design Patterns
+## Design Pattern Categories
 
-1. Categories:
-    * Creational: Factory, Singleton
-    * Behavioral (how classes communicate): State, Iterator, Command
-    * Structural: Adapter, Composite, Decorator, Facade, Proxy
+* Creational: Factory, Singleton
+* Behavioral (how classes communicate): State, Iterator, Command
+* Structural: Adapter, Composite, Decorator, Facade, Proxy
 
 ## References
 
 * [Head First Design Patterns: A Brain-Friendly Guide 1st Edition](https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly-dp-0596007124/dp/0596007124/ref=mt_paperback?_encoding=UTF8&me=&qid=1585509064)
+
+* [The Pragmatic Programmer](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwjp6c22-JLpAhWO-qQKHQ_GBQoQFjAAegQIARAB&url=https%3A%2F%2Fwww.goodreads.com%2Fbook%2Fshow%2F4099.The_Pragmatic_Programmer&usg=AOvVaw0I5l-Ojbr1FUIYyreWhRyx)
