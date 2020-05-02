@@ -55,6 +55,8 @@ tags = ["Software Engineering"]
 
 9. Tell-Don't-Ask: A->B  instead of B->A->B for data.
 
+10. Build end-to-end (incrementally) instead of top-down nor bottom-up.
+
 ## The Strategy Pattern
 
 1. The strategy pattern enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
