@@ -62,6 +62,8 @@ tags = ["Software Engineering"]
 
 12. There's no need to prefix `m_` for private stuff.
 
+13. We shouldn't *always* use patterns in today's agile and XP trends. But if our specific solution is similar to a pattern, refactor it to make it more generic if needed.
+
 ## The Strategy Pattern
 
 1. The strategy pattern enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
@@ -223,3 +225,5 @@ tags = ["Software Engineering"]
 * [The Pragmatic Programmer](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwjp6c22-JLpAhWO-qQKHQ_GBQoQFjAAegQIARAB&url=https%3A%2F%2Fwww.goodreads.com%2Fbook%2Fshow%2F4099.The_Pragmatic_Programmer&usg=AOvVaw0I5l-Ojbr1FUIYyreWhRyx)
 
 * [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
+
+* [The Software Craftsman: Professionalism, Pragmatism, Pride](https://www.goodreads.com/book/show/23215733-the-software-craftsman?ac=1&from_search=true&qid=aFF78JXQaM&rank=2#)
