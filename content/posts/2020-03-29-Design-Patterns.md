@@ -52,10 +52,15 @@ tags = ["Software Engineering"]
 7. Principle of Least Knowledge aka (Law of Demeter): talk only to your immediate friends.
 
 8. The Hollywood Principle (aka. Inversion of Control): (High-level components) Don't call us, we'll call you (low-level components).
+    * A form of IoC:  Dependency injection - a technique in which an object receives other objects that it depends on.
 
 9. Tell-Don't-Ask: A->B  instead of B->A->B for data.
 
 10. Build end-to-end (incrementally) instead of top-down nor bottom-up.
+
+11. In a Test-driven development (TDD), there's no need to do a big design up front.
+
+12. There's no need to prefix `m_` for private stuff.
 
 ## The Strategy Pattern
 
@@ -216,3 +221,5 @@ tags = ["Software Engineering"]
 * [Head First Design Patterns: A Brain-Friendly Guide 1st Edition](https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly-dp-0596007124/dp/0596007124/ref=mt_paperback?_encoding=UTF8&me=&qid=1585509064)
 
 * [The Pragmatic Programmer](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwjp6c22-JLpAhWO-qQKHQ_GBQoQFjAAegQIARAB&url=https%3A%2F%2Fwww.goodreads.com%2Fbook%2Fshow%2F4099.The_Pragmatic_Programmer&usg=AOvVaw0I5l-Ojbr1FUIYyreWhRyx)
+
+* [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code)
