@@ -99,7 +99,7 @@ $$f(x)=\frac{1}{1+e^{-(wx+b)}}$$
 
 4. For binary classification, we can say the label is positive if the probability is higher than or equal to 0.5.
 
-5. We optimize by using the maximum likelihood $y_i$ is either 0 or 1:
+5. We optimize by using the maximum likelihood (the goodness of fit) ($y_i$ is either 0 or 1):
 
 $$L_{w,b}=\prod_{i=1...N}f_{w,b}(x_i)^{y_i}(1-f_{w,b}(x_i))^{1-y_i}$$
 
