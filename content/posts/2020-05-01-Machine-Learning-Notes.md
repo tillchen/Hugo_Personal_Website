@@ -15,6 +15,7 @@ tags = ["Machine Learning", "AI"]
   * [Notations and Definitions](#notations-and-definitions)
 * [Fundamental Algorithms](#fundamental-algorithms)
   * [Linear Regression](#linear-regression)
+* [Logistic Regression](#logistic-regression)
 * [References](#references)
 
 ## Introduction
@@ -81,6 +82,32 @@ $$\frac{1}{N}\sum_{i=1...N}(f_{w,b}(x_i)-y_i)^2$$
 4. The squared loss is used since it's convinent. The absolute loss function doesn't have a continuous derivative, which makes it not smooth. Unsmooth functions create difficulties for optimization problems in linear algebra.
 
 5. To find the extrema (minima or maxima), we can simply set the gradient to zero.
+
+## Logistic Regression
+
+1. Logistic regression is not a regression, but a classification learning algorithm. The names is because the mathematical formulation is similar to linear regression.
+
+2. The standard logistic function or the sigmoid function:
+
+$$f(x)=\frac{1}{1+e^{-x}}$$
+
+![Logistic Function](/images/logistic_function.png)
+
+3. The logistic regression model:
+
+$$f(x)=\frac{1}{1+e^{-(wx+b)}}$$
+
+4. For binary classification, we can say the label is positive if the probability is higher than or equal to 0.5.
+
+5. We optimize by using the maximum likelihood $y_i$ is either 0 or 1:
+
+$$L_{w,b}=\prod_{i=1...N}f_{w,b}(x_i)^{y_i}(1-f_{w,b}(x_i))^{1-y_i}$$
+
+6. In practice, it's more convenient to maximize the log-likelihood (since ln is a strictly increasing function, maximizing this is the same as maximizing its argument):
+
+$$LogL_{w,b}=ln(L_{w,b})=\sum_{i=1}^Ny_iln(f_{w,b}(x_i)) + (1-y_i)ln(1-f_{w,b}(x_i))$$
+
+7. Unlike linear regression, there's no closed form solution. A typical numerical optimization procedure is gradient descent.
 
 ## References
 
