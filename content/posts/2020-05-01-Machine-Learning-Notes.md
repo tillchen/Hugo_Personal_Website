@@ -16,6 +16,11 @@ tags = ["Machine Learning", "AI"]
 * [Fundamental Algorithms](#fundamental-algorithms)
   * [Linear Regression](#linear-regression)
 * [Logistic Regression](#logistic-regression)
+* [Decision Tree Learning](#decision-tree-learning)
+* [Support Vector Machine](#support-vector-machine)
+  * [Dealing With Noise](#dealing-with-noise)
+    * [Dealing with Inherent Non-Linearity (Kernels)](#dealing-with-inherent-non-linearity-kernels)
+* [k-Nearest Neighbors (kNN)](#k-nearest-neighbors-knn)
 * [References](#references)
 
 ## Introduction
@@ -41,7 +46,7 @@ This post is about some basic machine learning concepts.
 
 #### Reinforcement learning
 
-* It perceives the **state** of the environment as a feature vector adn the execute **actions** in every state, which bring **rewards** and move the machine to another state.
+* It perceives the **state** of the environment as a feature vector and then execute **actions** in every state, which bring **rewards** and move the machine to another state.
 * The goal is to learn a **policy**: a function that takes the feature vector as input and outputs an optimal action that maximizes the expected average reward.
 * It's suited for problems whose decision making is sequential and the goal is long-term.
 
@@ -108,6 +113,34 @@ $$L_{w,b}=\prod_{i=1...N}f_{w,b}(x_i)^{y_i}(1-f_{w,b}(x_i))^{1-y_i}$$
 $$LogL_{w,b}=ln(L_{w,b})=\sum_{i=1}^Ny_iln(f_{w,b}(x_i)) + (1-y_i)ln(1-f_{w,b}(x_i))$$
 
 7. Unlike linear regression, there's no closed form solution. A typical numerical optimization procedure is gradient descent.
+
+## Decision Tree Learning
+
+To be filled.
+
+## Support Vector Machine
+
+To be filled.
+
+### Dealing With Noise
+
+To be filled.
+
+#### Dealing with Inherent Non-Linearity (Kernels)
+
+1. The kernel trick: use a function to *implicitly* transform the original space into a higher dimensional space during the cost function optimization. (We hope that data will be linearly separable in the transformed space).
+
+2. We use kernel functions or simply kernels to efficiently work in higher-dimensional spaces without doing this transformation explicitly.
+
+3. By using the kernel trick, we get rid of a costly transformation to the higher dimension and avoid computing their dot-product.
+
+4. We can use the quadratic kernel $k(x_i, x_k) = (x_ix_k)^2$ here. Another widely used kernel is the RBF (radial basis function) kernel: $k(x, x^{'}) = exp(-\frac{||x-x^{'}||^2}{2\sigma^2})$. It has infinite dimensions. We can vary the hyperparameter $\sigma$  and choose wether to get a smooth of curvy decision boundary.
+
+## k-Nearest Neighbors (kNN)
+
+1. kNN is a non-parametric learning algorithm. Contrary to other learning algorithms that allow discarding the training data after the model is built, kNN keeps all training examples in memory.
+
+2. The closeness of two examples is given by a distance function. Other than the Euclidean distance, we could also use the cosine similarity function ($0^{\circ}: 1; 90^{\circ}: 0; 180^{\circ}: -1$).
 
 ## References
 
