@@ -15,12 +15,16 @@ tags = ["Machine Learning", "AI"]
   * [Notations and Definitions](#notations-and-definitions)
 * [Fundamental Algorithms](#fundamental-algorithms)
   * [Linear Regression](#linear-regression)
-* [Logistic Regression](#logistic-regression)
-* [Decision Tree Learning](#decision-tree-learning)
-* [Support Vector Machine](#support-vector-machine)
-  * [Dealing With Noise](#dealing-with-noise)
-    * [Dealing with Inherent Non-Linearity (Kernels)](#dealing-with-inherent-non-linearity-kernels)
-* [k-Nearest Neighbors (kNN)](#k-nearest-neighbors-knn)
+  * [Logistic Regression](#logistic-regression)
+  * [Decision Tree Learning](#decision-tree-learning)
+  * [Support Vector Machine](#support-vector-machine)
+    * [Dealing With Noise](#dealing-with-noise)
+      * [Dealing with Inherent Non-Linearity (Kernels)](#dealing-with-inherent-non-linearity-kernels)
+  * [k-Nearest Neighbors (kNN)](#k-nearest-neighbors-knn)
+* [Anatomy of a Learning Algorithm](#anatomy-of-a-learning-algorithm)
+  * [Building blocks](#building-blocks)
+  * [Gradient Descent](#gradient-descent)
+  * [Particularities](#particularities)
 * [References](#references)
 
 ## Introduction
@@ -88,7 +92,7 @@ $$\frac{1}{N}\sum_{i=1...N}(f_{w,b}(x_i)-y_i)^2$$
 
 5. To find the extrema (minima or maxima), we can simply set the gradient to zero.
 
-## Logistic Regression
+### Logistic Regression
 
 1. Logistic regression is not a regression, but a classification learning algorithm. The names is because the mathematical formulation is similar to linear regression.
 
@@ -114,19 +118,19 @@ $$LogL_{w,b}=ln(L_{w,b})=\sum_{i=1}^Ny_iln(f_{w,b}(x_i)) + (1-y_i)ln(1-f_{w,b}(x
 
 7. Unlike linear regression, there's no closed form solution. A typical numerical optimization procedure is gradient descent.
 
-## Decision Tree Learning
+### Decision Tree Learning
 
 To be filled.
 
-## Support Vector Machine
+### Support Vector Machine
 
 To be filled.
 
-### Dealing With Noise
+#### Dealing With Noise
 
 To be filled.
 
-#### Dealing with Inherent Non-Linearity (Kernels)
+##### Dealing with Inherent Non-Linearity (Kernels)
 
 1. The kernel trick: use a function to *implicitly* transform the original space into a higher dimensional space during the cost function optimization. (We hope that data will be linearly separable in the transformed space).
 
@@ -136,11 +140,51 @@ To be filled.
 
 4. We can use the quadratic kernel $k(x_i, x_k) = (x_ix_k)^2$ here. Another widely used kernel is the RBF (radial basis function) kernel: $k(x, x^{'}) = exp(-\frac{||x-x^{'}||^2}{2\sigma^2})$. It has infinite dimensions. We can vary the hyperparameter $\sigma$  and choose wether to get a smooth of curvy decision boundary.
 
-## k-Nearest Neighbors (kNN)
+### k-Nearest Neighbors (kNN)
 
 1. kNN is a non-parametric learning algorithm. Contrary to other learning algorithms that allow discarding the training data after the model is built, kNN keeps all training examples in memory.
 
 2. The closeness of two examples is given by a distance function. Other than the Euclidean distance, we could also use the cosine similarity function ($0^{\circ}: 1; 90^{\circ}: 0; 180^{\circ}: -1$).
+
+## Anatomy of a Learning Algorithm
+
+### Building blocks
+
+1. A loss function
+2. An optimization criterion based on the loss function (e.g. a cost function)
+3. An optimization routine leveraging training data to find a solution to the optimization criterion.
+
+### Gradient Descent
+
+1. To find a local minimum, start at some random point and takes step proportional (learning rate) to the negative of the gradient.
+
+2. The gradient is calculated by taking the partial derivative for every parameter in the loss function: (take linear regression as an example)
+
+$$l = \frac{1}{N}\sum_{i=1}^{N}(y_i-(wx_i+b))^2$$
+
+$$\frac{\partial l}{\partial w} = \frac{1}{N}\sum_{i=1}^{N}-2x_i(y_i-(wx_i+b))$$
+
+$$\frac{\partial l}{\partial b} = \frac{1}{N}\sum_{i=1}^{N}-2(y_i-(wx_i+b))$$
+
+3. An epoch consists of using the training set entirely to update each parameter. At each epoch, we update $w$ and $b$ ($\alpha$ is the learning rate):
+
+$$w \leftarrow w - \alpha\frac{\partial l}{\partial w}$$
+
+$$b \leftarrow b - \alpha\frac{\partial l}{\partial b}$$
+
+4. Minibatch stochastic gradient descent is a version that speed up the computation by approximating the gradient using smaller batches.
+
+### Particularities
+
+1. Some algorithms, like decision tree learning, can accept categorical features while others expect numerical values. All algorithms in scikit-learn expect numerical features.
+
+2. Some algorithms, like SVM, allow weightings for each class. If the weighting is higher, the algorithm tries not to make errors in predicting training examples of this class.
+
+3. Some classification models, like SVM and kNN, only output the class. Others, like logistic regression or decision trees, can also return the score between 0 and 1 (can be used as a confidence score).
+
+4. Some classification algorithms - like decision trees, logistic regression, or SVM - build the model using the whole dataset at once. Others can be trained iteratively, one batch at a time.
+
+5. Some algorithms, like decision trees/SVM/kNN, can be used for both classification and regression, while others can only solve one type of problem.
 
 ## References
 
