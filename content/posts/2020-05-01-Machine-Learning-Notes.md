@@ -34,6 +34,8 @@ tags = ["Machine Learning", "AI"]
     * [Dealing with Missing Features](#dealing-with-missing-features)
   * [Learning Algorithm Selection](#learning-algorithm-selection)
   * [Three Sets](#three-sets)
+  * [Underfitting and Overfitting](#underfitting-and-overfitting)
+  * [Regularization](#regularization)
 * [References](#references)
 
 ## Introduction
@@ -270,6 +272,45 @@ $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
     * Test set (2.5%): assess the model before delivery and production.
 
 2. The last two are also called holdout sets, which are not used to build the model.
+
+### Underfitting and Overfitting
+
+1. Underfitting: the model makes many mistakes on the training data - high bias.
+    * The model is too simple.
+    * The features are not informative enough.
+
+2. Overfitting: the model predicts very well the training data but poorly the data from the holdout sets. - high variance (the error due to the sensitivity to small fluctuations in the training set)
+    * The model is too complex.
+    * Too many features but a small number of training examples.
+
+3. The overfitting model learns the idiosyncrasies of the training set:
+    * the noise
+    * the sampling imperfection due to the small dataset size
+    * other artifacts extrinsic to the decision problem
+
+4. Solutions for overfitting:
+    * Try a simply model
+    * Reduce the dimensionality
+    * Add more training data
+    * Regularization - the most widely used approach
+
+### Regularization
+
+1. Regularization forces the learning algorithm to build a less complex model, which leads to a slightly higher bias but a much lower variance - the bias-variance tradeoff.
+
+2. The two most widely used are L1 and L2 regularization, which add a penalizing term whose value is higher when the model is more complex.
+
+3. For linear regression, L1 looks like this ($|\mathbf{w}| = \sum_{i=1}^D|w^{(j)}|$ and C is a hyperparameter), which tries to set most $w^{(j)}$ to value small values or zero (|| means abs here):
+
+$$\min_{\mathbf{w},b} \left[C|\mathbf{w}| + \frac{1}{N}\sum_{i=1...N}(f_{\mathbf{w},b}(\mathbf{x}_i)-y_i)^2\right]$$
+
+4. For linear regression, L2 looks like this (($||\mathbf{w}||^2 = \sum_{i=1}^D(w^{(j)})^2$):
+
+$$\min_{\mathbf{w},b} \left[C||\mathbf{w}||^2 + \frac{1}{N}\sum_{i=1...N}(f_{\mathbf{w},b}(\mathbf{x}_i)-y_i)^2\right]$$
+
+5. L1 produces a sparse model with most parameters equal to zero if C is large enough, which makes feature selection that decides which features are essential and increases explainability. L2 gives better results if our only goal is to maximize the performance on holdout sets. Plus L2 is differentiable - graident descent.
+
+6. L1 and L2 are the special cases for elastic net regularization. L1 - lasso; L2 - ridge regularization.
 
 ## References
 
