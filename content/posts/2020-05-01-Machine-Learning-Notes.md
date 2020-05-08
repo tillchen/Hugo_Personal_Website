@@ -12,7 +12,7 @@ tags = ["Machine Learning", "AI"]
     * [Unsupervised learning](#unsupervised-learning)
     * [Semi-supervised learning](#semi-supervised-learning)
     * [Reinforcement learning](#reinforcement-learning)
-  * [Notations and Definitions](#notations-and-definitions)
+* [Notations and Definitions](#notations-and-definitions)
 * [Fundamental Algorithms](#fundamental-algorithms)
   * [Linear Regression](#linear-regression)
   * [Logistic Regression](#logistic-regression)
@@ -31,6 +31,9 @@ tags = ["Machine Learning", "AI"]
     * [Binning (Bucketing) (Numerical -> Categorical)](#binning-bucketing-numerical---categorical)
     * [Normalization](#normalization)
     * [Standardization (Z-score Normalization)](#standardization-z-score-normalization)
+    * [Dealing with Missing Features](#dealing-with-missing-features)
+  * [Learning Algorithm Selection](#learning-algorithm-selection)
+  * [Three Sets](#three-sets)
 * [References](#references)
 
 ## Introduction
@@ -60,7 +63,7 @@ This post is about some basic machine learning concepts.
 * The goal is to learn a **policy**: a function that takes the feature vector as input and outputs an optimal action that maximizes the expected average reward.
 * It's suited for problems whose decision making is sequential and the goal is long-term.
 
-### Notations and Definitions
+## Notations and Definitions
 
 1. $x_{l,u}^{(j)}$ in a neural net means the feature j of unit u in layer l.
 
@@ -229,10 +232,44 @@ $$\bar x^{(j)} = \frac{x^{(j)}-min^{(j)}}{max^{(j)}-min^{(j)}}$$
 $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
 
 3. Normalization vs Standardization:
-    * Unsupervised learning - standardization
-    * The distribution is close to a normal distribution - standardization
-    * Have outliers - standardization (normalization will squeeze the normal values into a very small range)
+    * Unsupervised learning - standardization.
+    * The distribution is close to a normal distribution - standardization.
+    * Have outliers - standardization (normalization will squeeze the normal values into a very small range).
     * Other cases - normalization.
+
+#### Dealing with Missing Features
+
+1. Remove the examples with missing features
+
+2. Use a learning algorithm that can deal with missing feature values.
+
+3. Use Data imputation (the process of replacing missing data with substituted values)
+    * Replace the missing value with an average value.
+    * Replace the missing value with a value outside the normal range.
+    * Replace the missing value with a value in the middle of the range.
+    * Use the missing value as the target for a regression problem.
+    * Increase the dimensionality by adding a binary indicator feature.
+
+### Learning Algorithm Selection
+
+* Explainability
+* In-memory vs. out-of-memory (batch or incremental/online)
+* Number of features and examples (neural networks for a huge number of features)
+* Categorical vs. numerical features
+* Nonlinearity of the data (SVM/linear regression/linear kernel/logistic regression of lineraly separable data)
+* Training speed (neural networks are slow to train)
+* Prediction speed
+
+![scikit-learn cheat sheet](/images/ml_map.png)
+
+### Three Sets
+
+1. Three sets:
+    * Training set (95%)
+    * Validation set (2.5%): choose the learning algorithm and find the best values of hyperparameters.
+    * Test set (2.5%): assess the model before delivery and production.
+
+2. The last two are also called holdout sets, which are not used to build the model.
 
 ## References
 
