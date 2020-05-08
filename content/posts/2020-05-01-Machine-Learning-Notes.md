@@ -25,6 +25,12 @@ tags = ["Machine Learning", "AI"]
   * [Building blocks](#building-blocks)
   * [Gradient Descent](#gradient-descent)
   * [Particularities](#particularities)
+* [Basic Practice](#basic-practice)
+  * [Feature Engineering](#feature-engineering)
+    * [One-Hot Encoding (Categorical -> Numerical)](#one-hot-encoding-categorical---numerical)
+    * [Binning (Bucketing) (Numerical -> Categorical)](#binning-bucketing-numerical---categorical)
+    * [Normalization](#normalization)
+    * [Standardization (Z-score Normalization)](#standardization-z-score-normalization)
 * [References](#references)
 
 ## Introduction
@@ -185,6 +191,48 @@ $$b \leftarrow b - \alpha\frac{\partial l}{\partial b}$$
 4. Some classification algorithms - like decision trees, logistic regression, or SVM - build the model using the whole dataset at once. Others can be trained iteratively, one batch at a time.
 
 5. Some algorithms, like decision trees/SVM/kNN, can be used for both classification and regression, while others can only solve one type of problem.
+
+## Basic Practice
+
+### Feature Engineering
+
+1. Feature engineering: the problem of transforming raw data into a dataset.
+
+2. The role of the data analyst is to create informative features with high predictive power.
+
+3. We say a model has a low bias when it predicts the training data well.
+
+#### One-Hot Encoding (Categorical -> Numerical)
+
+1. One-hot is a group of bits among which the legal combinations of values are only those with a single high (1) bit and all the others low (0). It transforms a categorical feature into several binary ones.
+
+2. Example: red = [1,0,0]; yellow = [0,1,0]; green = [0,0,1].
+
+3. When the ordering matters, we can just do: {poor, decent, good, excellent} -> {1, 2, 3, 4}.
+
+#### Binning (Bucketing) (Numerical -> Categorical)
+
+1. Binning converts a continuous feature in to multiple binary features called bins, typically based on value range.
+
+#### Normalization
+
+1. Normalization converts a numerical value into a value typically in the interval [-1,1] or [0,1], which increases the speed of learning:
+
+$$\bar x^{(j)} = \frac{x^{(j)}-min^{(j)}}{max^{(j)}-min^{(j)}}$$
+
+#### Standardization (Z-score Normalization)
+
+1. Standardization rescales the feature values so that they have the properties of a standard normal distribution with $\mu = 0$ and  $\sigma = 1$.
+
+2. Standard scores or z-scores can be calculated as follows:
+
+$$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
+
+3. Normalization vs Standardization:
+    * Unsupervised learning - standardization
+    * The distribution is close to a normal distribution - standardization
+    * Have outliers - standardization (normalization will squeeze the normal values into a very small range)
+    * Other cases - normalization.
 
 ## References
 
