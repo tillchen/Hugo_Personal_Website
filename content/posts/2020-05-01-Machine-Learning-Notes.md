@@ -36,6 +36,9 @@ tags = ["Machine Learning", "AI"]
   * [Three Sets](#three-sets)
   * [Underfitting and Overfitting](#underfitting-and-overfitting)
   * [Regularization](#regularization)
+  * [Model Performance Assessment](#model-performance-assessment)
+  * [Hyperparameter Tuning](#hyperparameter-tuning)
+    * [Cross-Validation](#cross-validation)
 * [References](#references)
 
 ## Introduction
@@ -311,6 +314,20 @@ $$\min_{\mathbf{w},b} \left[C||\mathbf{w}||^2 + \frac{1}{N}\sum_{i=1...N}(f_{\ma
 5. L1 produces a sparse model with most parameters equal to zero if C is large enough, which makes feature selection that decides which features are essential and increases explainability. L2 gives better results if our only goal is to maximize the performance on holdout sets. Plus L2 is differentiable - graident descent.
 
 6. L1 and L2 are the special cases for elastic net regularization. L1 - lasso; L2 - ridge regularization.
+
+### Model Performance Assessment
+
+To be filled.
+
+### Hyperparameter Tuning
+
+To be filled.
+
+#### Cross-Validation
+
+1. When we have few training examples, it could be prohibitive to have both validation and test set. So we can split the data into a training and a test set and use cross-validation on the training set to simulate a validation set.
+
+2. Each subset of the training set is called a fold. Typically, a five-fold cross-validation is used in practice. We would train five models (use $F_2 F_3 F_4 F_5$ for model 1 and so on) and compute the value of the metric of interest on each validation set, from $F_1$ to $F_5$ and get the average score.
 
 ## References
 
