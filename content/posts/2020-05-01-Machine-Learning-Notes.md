@@ -60,6 +60,13 @@ tags = ["Machine Learning", "AI"]
   * [Zero-Shot Learning](#zero-shot-learning)
 * [Advanced Practice](#advanced-practice)
 * [Unsupervised Learning](#unsupervised-learning-1)
+  * [Density Estimation](#density-estimation)
+  * [Clustering](#clustering)
+    * [K-Means](#k-means)
+    * [DBSCAN and HDBSCAN](#dbscan-and-hdbscan)
+    * [Determining the Number of Clusters](#determining-the-number-of-clusters)
+    * [Other Clustering Algorithms](#other-clustering-algorithms)
+  * [Dimensionality Reduction](#dimensionality-reduction)
 * [References](#references)
 
 ## Introduction
@@ -467,7 +474,37 @@ To be filled.
 
 ## Unsupervised Learning
 
+Unsupervised learning deals with problems in which data doesn't have labels.
 
+### Density Estimation
+
+To be filled.
+
+### Clustering
+
+Clustering is a problem of learning to assign a label to examples by leveraging an unlabeled dataset.
+
+#### K-Means
+
+1. Choose k - the number of clusters (a hyperparameter which requires an educated guess).
+2. Randomly put k feature vectors, called centroids, to the feature space. (The initial positions influence the final positions.)
+3. Compute the distance from each example x to each centroid c using some metric, like the Euclidean distance. Assign the closest centroid to each example.
+4. For each centroid, calculate the average feature vector of the examples labeled with it. The average feature vectors become the new locations of the centroids.
+5. Recompute the distance from each example to each centroid, modify the assignment and repeat the procedure until the assignments don't change after the centroid locations were recomputed.
+
+#### DBSCAN and HDBSCAN
+
+To be filled.
+
+#### Determining the Number of Clusters
+
+To be filled.
+
+#### Other Clustering Algorithms
+
+To be filled.
+
+### Dimensionality Reduction
 
 ## References
 
