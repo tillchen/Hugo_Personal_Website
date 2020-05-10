@@ -48,6 +48,18 @@ tags = ["Machine Learning", "AI"]
     * [Recurrent Neural Network](#recurrent-neural-network)
 * [Problems and Solutions](#problems-and-solutions)
   * [Kernel Regression](#kernel-regression)
+  * [Multiclass Classification](#multiclass-classification)
+  * [One-Class Classification](#one-class-classification)
+  * [Multi-Label Classification](#multi-label-classification)
+  * [Ensemble Learning](#ensemble-learning)
+  * [Learning to Label Sequences](#learning-to-label-sequences)
+  * [Sequence to Sequence Learning](#sequence-to-sequence-learning)
+  * [Active Learning](#active-learning)
+  * [Semi-Supervised Learning](#semi-supervised-learning-1)
+  * [One-Shot Learning](#one-shot-learning)
+  * [Zero-Shot Learning](#zero-shot-learning)
+* [Advanced Practice](#advanced-practice)
+* [Unsupervised Learning](#unsupervised-learning-1)
 * [References](#references)
 
 ## Introduction
@@ -398,6 +410,62 @@ To be filled.
 ## Problems and Solutions
 
 ### Kernel Regression
+
+1. Kernel regression is a non-parametric method, which means there are no parameters to learn. The model is based on the data itself (like in kNN).
+
+2. The simplest kernel regression looks like this (the function $k(\cdot)$ is called a kernel, which plays the role of a similarity function - $w_i$ is higher when x is similar to $x_i$):
+
+$$f(x)=\frac{1}{N}\sum_{i=1}^{N}w_iy_i, \ where \ w_i = \frac{Nk(\frac{x_i - x}{b})}{\sum_{l=1}^Nk(\frac{x_l - x}{b})}$$
+
+3. Kernels can have different forms, the most frequently used is the Gaussian kernel:
+
+$$k(z)=\frac{1}{\sqrt{2\pi}}exp(\frac{-z^2}{2})$$
+
+### Multiclass Classification
+
+To be filled.
+
+### One-Class Classification
+
+To be filled.
+
+### Multi-Label Classification
+
+To be filled.
+
+### Ensemble Learning
+
+To be filled.
+
+### Learning to Label Sequences
+
+To be filled.
+
+### Sequence to Sequence Learning
+
+To be filled.
+
+### Active Learning
+
+To be filled.
+
+### Semi-Supervised Learning
+
+To be filled.
+
+### One-Shot Learning
+
+To be filled.
+
+### Zero-Shot Learning
+
+To be filled.
+
+## Advanced Practice
+
+To be filled.
+
+## Unsupervised Learning
 
 
 
