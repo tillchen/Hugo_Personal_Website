@@ -39,6 +39,10 @@ tags = ["Machine Learning", "AI"]
   * [Model Performance Assessment](#model-performance-assessment)
   * [Hyperparameter Tuning](#hyperparameter-tuning)
     * [Cross-Validation](#cross-validation)
+* [Neural Networks and Deep Learning](#neural-networks-and-deep-learning)
+  * [Neural Networks](#neural-networks)
+    * [Multilayer Perceptron (Vanilla Neural Network)](#multilayer-perceptron-vanilla-neural-network)
+    * [Feed-Forward Neural Network Architecture](#feed-forward-neural-network-architecture)
 * [References](#references)
 
 ## Introduction
@@ -328,6 +332,45 @@ To be filled.
 1. When we have few training examples, it could be prohibitive to have both validation and test set. So we can split the data into a training and a test set and use cross-validation on the training set to simulate a validation set.
 
 2. Each subset of the training set is called a fold. Typically, a five-fold cross-validation is used in practice. We would train five models (use $F_2 F_3 F_4 F_5$ for model 1 and so on) and compute the value of the metric of interest on each validation set, from $F_1$ to $F_5$ and get the average score.
+
+## Neural Networks and Deep Learning
+
+### Neural Networks
+
+1. The function $f_{NN}$ is a nested function. So for a 3-layer neural network that returns a scalar:
+
+$$y=f_{NN}(\mathbf{x}) = f_3(\mathbf{f}_2(\mathbf{f}_1(\mathbf{x})))$$
+
+1. $\mathbf{f}_1$ and $\mathbf{f}_2$ are vector functions of the following form ($\mathbf{g}_l$ is the activation function - a fixed and chosen nonlinear function; $\mathbf{W}_l$ (a matrix) and $\mathbf{b}_l$ (a vector) are learned using gradient descent):
+
+$$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)$$
+
+#### Multilayer Perceptron (Vanilla Neural Network)
+
+1. A multiplayer perceptron (MLP) is a class of a feed-forward neural network (FFNN). It has a fully-connected architecture.
+
+2. In each rectangle unit:
+    1. All inputs of the unit are joined together to form an input vector.
+    2. The unit applies a linear transformation.
+    3. The unit applies an activation function.
+
+3. An example (each unit's parameters $\mathbf{w}_{l,u}$ and $b_{l,u}$):
+
+![MLP](/images/mlp.png)
+
+#### Feed-Forward Neural Network Architecture
+
+1. If we want to solve a regression or a classification problem, the last layer usually contains only one unit. If $g_{last}$ is linear, then the neural net is a regression model. If $g_{last}$ is a logistic function, it's a binary classification model.
+
+2. Any differentiable function can be chosen as $g_{l,u}$. And primary reason of such a nonlinear component is to allow the neural net to approximate nonlinear functions.
+
+3. Popular choices for $g$ are the logistic function, TanH, and ReLU (rectified linear unit function):
+
+$$tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$$
+
+$$relu(z) = 0 \ \ if \ z < 0$$
+
+$$relu(z)= z \ \ otherwise$$
 
 ## References
 
