@@ -314,7 +314,7 @@ $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
     * The model is too simple.
     * The features are not informative enough.
 
-2. Overfitting: the model predicts very well the training data but poorly the data from the holdout sets. - high variance (the error due to the sensitivity to small fluctuations in the training set)
+2. Overfitting: the model predicts very well the training data but poorly the data from the holdout sets. - high variance (the error due to the sensitivity to small fluctuations in the training set) (variance is the difference in fits between data sets - consistency)
     * The model is too complex.
     * Too many features but a small number of training examples.
 
