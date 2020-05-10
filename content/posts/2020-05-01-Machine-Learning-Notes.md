@@ -43,6 +43,11 @@ tags = ["Machine Learning", "AI"]
   * [Neural Networks](#neural-networks)
     * [Multilayer Perceptron (Vanilla Neural Network)](#multilayer-perceptron-vanilla-neural-network)
     * [Feed-Forward Neural Network Architecture](#feed-forward-neural-network-architecture)
+  * [Deep Learning](#deep-learning)
+    * [Convolutional Neural Network](#convolutional-neural-network)
+    * [Recurrent Neural Network](#recurrent-neural-network)
+* [Problems and Solutions](#problems-and-solutions)
+  * [Kernel Regression](#kernel-regression)
 * [References](#references)
 
 ## Introduction
@@ -354,7 +359,7 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
     2. The unit applies a linear transformation.
     3. The unit applies an activation function.
 
-3. An example (each unit's parameters $\mathbf{w}_{l,u}$ and $b_{l,u}$):
+3. An example (each unit's parameters $w_{l,u}$ and $b_{l,u}$):
 
 ![MLP](/images/mlp.png)
 
@@ -371,6 +376,30 @@ $$tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$$
 $$relu(z) = 0 \ \ if \ z < 0$$
 
 $$relu(z)= z \ \ otherwise$$
+
+### Deep Learning
+
+1. Deep learning refers to training neural networks with more than two non-ouput layers.
+
+2. The two biggest challenges:
+    * Exploding gradient - use gradient clipping or $L_1$ $L_2$ regularization
+    * Vanishing gradient - use ReLU, LSTM, and skip connections (in residual neural networks)
+
+3. Backpropagation is an efficient algorithm for computing gradients on neural networks using the chain rule. (It's used to update the parameters.)
+
+#### Convolutional Neural Network
+
+To be filled.
+
+#### Recurrent Neural Network
+
+To be filled.
+
+## Problems and Solutions
+
+### Kernel Regression
+
+
 
 ## References
 
