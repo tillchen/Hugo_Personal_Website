@@ -67,6 +67,10 @@ tags = ["Machine Learning", "AI"]
     * [Determining the Number of Clusters](#determining-the-number-of-clusters)
     * [Other Clustering Algorithms](#other-clustering-algorithms)
   * [Dimensionality Reduction](#dimensionality-reduction)
+    * [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+    * [UMAP](#umap)
+  * [Outlier Detection](#outlier-detection)
+* [Other Forms of Learning](#other-forms-of-learning)
 * [References](#references)
 
 ## Introduction
@@ -505,6 +509,34 @@ To be filled.
 To be filled.
 
 ### Dimensionality Reduction
+
+1. Since modern ML algorithms can handle very high-dimensional examples, dimensionality reduction techniques are used less in practice than in the past.
+
+2. The most frequent use case is data visualization: human can only interpret on a plot the maximum of three dimensions.
+
+3. Another situation is that we need to build an interpretable model and are limited in the choice of algorithms. Then it removes redundant or highly correlated features and also reduces the noise in the data, which all improve the interpretability of the model.
+
+#### Principal Component Analysis (PCA)
+
+1. Example:
+
+![PCA](/images/pca.png)
+
+2. Principal components are vectors that define a new coordinate system in which the first axis goes in the direction of the highest variance in the data. The second axis is orthogonal to the first one and goes in the direction of the second highest variance in the data. The length of the arrow reflects the variance in the direction.
+
+3. If we want to reduce the dimensionality to $D_{new} < D$, we pick $D_{new}$ largest principal components and project our data points on them. For 2D, we can set $D_{new} = 1$ and get the projected orange points in the figure. To describe each orange point, we need only one coordinate instead of two: the coordinate with respect to the first principal component.
+
+#### UMAP
+
+To be filled.
+
+### Outlier Detection
+
+To be filled.
+
+## Other Forms of Learning
+
+To be filled.
 
 ## References
 
