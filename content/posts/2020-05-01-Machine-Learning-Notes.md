@@ -187,6 +187,14 @@ $$\gamma = argmin_{\gamma}\sum_{i=1}^N(y_i-f_{\gamma}(x_i))^2$$
 
 ![Linear Regression](/images/linear_regression.png)
 
+11. Find local minimum/maximum:
+
+![min max](/images/min_max.png)
+
+$$M \ \text{positive definite} \Leftrightarrow x^TMx>0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
+
+$$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
+
 ### Logistic Regression
 
 1. Logistic regression is not a regression, but a classification learning algorithm. The names is because the mathematical formulation is similar to linear regression.
@@ -598,3 +606,4 @@ To be filled.
 * [The Hundred-Page Machine Learning Book](https://www.goodreads.com/book/show/43190851-the-hundred-page-machine-learning-book)
 * [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://www.goodreads.com/book/show/148009.The_Elements_of_Statistical_Learning?ac=1&from_search=true&qid=8GAFr2BFEO&rank=1)
 * [An Introduction to Statistical Learning: With Applications in R](https://www.goodreads.com/book/show/17397466-an-introduction-to-statistical-learning)
+* Machine Learning course by [Prof. Dr. Peter Zaspel](https://www.jacobs-university.de/directory/zaspel) at Jacobs University Bremen
