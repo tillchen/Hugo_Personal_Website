@@ -167,6 +167,26 @@ $$\frac{1}{N}\sum_{i=1...N}(f_{w,b}(x_i)-y_i)^2$$
 
 5. To find the extrema (minima or maxima), we can simply set the gradient to zero.
 
+6. The linear model is an approximation for the regressor $E(Y|X)$ of the form: ($\beta_0$ is the intercept or bias)
+
+$$f_{\beta}(X) = \beta_0+\sum_{j=1}^DX_j\beta_j$$
+
+7. By using $\beta = (\beta_0,...,\beta_D)^T$ and $Z=(1,X_1,...,X_D)^T$, we can rewrite the model to:
+
+$$f_{\beta}(Z)=Z^T\beta$$
+
+8. The least squares estimator (parameter estimator $\gamma$):
+
+$$\gamma = argmin_{\gamma}\sum_{i=1}^N(y_i-f_{\gamma}(x_i))^2$$
+
+9. Solution for the estimator:
+
+![Linear Regression by Least Squares](/images/linear_regression_least_squares.png)
+
+10. The algorithm:
+
+![Linear Regression](/images/linear_regression.png)
+
 ### Logistic Regression
 
 1. Logistic regression is not a regression, but a classification learning algorithm. The names is because the mathematical formulation is similar to linear regression.
