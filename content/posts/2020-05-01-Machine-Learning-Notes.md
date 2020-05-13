@@ -107,7 +107,7 @@ This post is about some basic machine learning concepts.
 
 2. $x$ is by default a column vector and $x^T$ a row vector. Then vector is on the left side of a matrix, we usually do $x^TA$.
 
-3. $\argmax_{a \in A}f(a)$ returns the element a of the set A that maximizes f(a).
+3. $argmax_{a \in A}f(a)$ returns the element a of the set A that maximizes f(a).
 
 4. $\mathbb{E}[\hat\theta(S_X) = \theta]$, where $\hat\theta(S_X)$ is the unbiased estimator of some statistic $\theta$ (e.g. $\mu$) calculated using a sample $S_X$.
 
@@ -145,7 +145,7 @@ $$f(x)=E(Y|X=x)$$
 
 5. Bayes classifier:
 
-$$f(x)=\argmin_{g \in R_G}[1-p(g|x)] \Rightarrow$$
+$$f(x)=argmin_{g \in R_G}[1-p(g|x)] \Rightarrow$$
 
 $$f(x)=\mathbf{g} \ if \ p(\mathbf{g}|x) = \max_{g \in R_G}p(g|x)$$
 
