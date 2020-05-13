@@ -13,6 +13,7 @@ tags = ["Machine Learning", "AI"]
     * [Semi-supervised learning](#semi-supervised-learning)
     * [Reinforcement learning](#reinforcement-learning)
 * [Notations and Definitions](#notations-and-definitions)
+  * [Statistical Decision Theory](#statistical-decision-theory)
 * [Fundamental Algorithms](#fundamental-algorithms)
   * [Linear Regression](#linear-regression)
   * [Logistic Regression](#logistic-regression)
@@ -106,7 +107,7 @@ This post is about some basic machine learning concepts.
 
 2. $x$ is by default a column vector and $x^T$ a row vector. Then vector is on the left side of a matrix, we usually do $x^TA$.
 
-3. $arg max_{a \in A}f(a)$ returns the element a of the set A that maximizes f(a).
+3. $\argmax_{a \in A}f(a)$ returns the element a of the set A that maximizes f(a).
 
 4. $\mathbb{E}[\hat\theta(S_X) = \theta]$, where $\hat\theta(S_X)$ is the unbiased estimator of some statistic $\theta$ (e.g. $\mu$) calculated using a sample $S_X$.
 
@@ -119,6 +120,34 @@ This post is about some basic machine learning concepts.
 7. Shallow vs deep learning:
     * Shallow learning: learns the parameters of the model directly from the features of the training examples.
     * Deep (neural network) learning: uses neural nets with more than one layer and learns the parameters from the outputs of the preceding layers instead.
+
+### Statistical Decision Theory
+
+1. Quantitative outputs are called $Y$ with $Y = (Y_1,...,Y_K)^T$; and qualitative outputs are called $G$ with $G = (G_1,...,G_K)^T$ (group).
+
+2. Loss functions:
+
+$$L_2(y, y') = (y-y')^2$$
+
+$$L_{0-1}(g, g') = 0 \ (g=g') \ or \ 1 \ (g\neq g')$$
+
+$$L_1(y,y') = |y-y'|$$
+
+3. Expected prediction error (EPE):
+
+$$EPE(f)=E(L_2(Y,f(X)))$$
+
+$$EPE(f)=E(L_{0-1}(G,f(X)))$$
+
+4. The function f that minimizes EPE is give by: ($E(Y|X=x)$ is called a regressor/regression function)
+
+$$f(x)=E(Y|X=x)$$
+
+5. Bayes classifier:
+
+$$f(x)=\argmin_{g \in R_G}[1-p(g|x)] \Rightarrow$$
+
+$$f(x)=\mathbf{g} \ if \ p(\mathbf{g}|x) = \max_{g \in R_G}p(g|x)$$
 
 ## Fundamental Algorithms
 
@@ -191,6 +220,12 @@ To be filled.
 1. kNN is a non-parametric learning algorithm. Contrary to other learning algorithms that allow discarding the training data after the model is built, kNN keeps all training examples in memory.
 
 2. The closeness of two examples is given by a distance function. Other than the Euclidean distance, we could also use the cosine similarity function ($0^{\circ}: 1; 90^{\circ}: 0; 180^{\circ}: -1$).
+
+3.
+
+![kNN regression](/images/kNN_regression.png)
+
+![kNN classification](/images/kNN_classification.png)
 
 ## Anatomy of a Learning Algorithm
 
@@ -541,3 +576,5 @@ To be filled.
 ## References
 
 * [The Hundred-Page Machine Learning Book](https://www.goodreads.com/book/show/43190851-the-hundred-page-machine-learning-book)
+* [The Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://www.goodreads.com/book/show/148009.The_Elements_of_Statistical_Learning?ac=1&from_search=true&qid=8GAFr2BFEO&rank=1)
+* [An Introduction to Statistical Learning: With Applications in R](https://www.goodreads.com/book/show/17397466-an-introduction-to-statistical-learning)
