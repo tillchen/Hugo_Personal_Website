@@ -149,6 +149,14 @@ $$f(x)=argmin_{g \in R_G}[1-p(g|x)] \Rightarrow$$
 
 $$f(x)=\mathbf{g} \ if \ p(\mathbf{g}|x) = \max_{g \in R_G}p(g|x)$$
 
+6. Expected squared prediction error of $\hat f$ at location $x_0$:
+
+$$EPE(\hat f, x_0)=E(L_2(Y,f(X))|X=x_0)$$
+
+7. Error = Irreducible Error + $\text{Bias}^2$ + Variance
+
+![error decomposition](/images/error_decomposition.png)
+
 ## Fundamental Algorithms
 
 ### Linear Regression
