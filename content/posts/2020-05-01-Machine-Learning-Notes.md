@@ -41,6 +41,7 @@ tags = ["Machine Learning", "AI"]
   * [Hyperparameter Tuning](#hyperparameter-tuning)
     * [Training Error](#training-error)
     * [Generalization/Test Error](#generalizationtest-error)
+    * [Validation Set Error Estimation](#validation-set-error-estimation)
     * [Cross-Validation](#cross-validation)
 * [Neural Networks and Deep Learning](#neural-networks-and-deep-learning)
   * [Neural Networks](#neural-networks)
@@ -478,11 +479,21 @@ EGE(\hat f, \tau) = E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\
 = \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
 $$
 
+#### Validation Set Error Estimation
+
+![validation set](/images/validation_set.png)
+
 #### Cross-Validation
 
 1. When we have few training examples, it could be prohibitive to have both validation and test set. So we can split the data into a training and a test set and use cross-validation on the training set to simulate a validation set.
 
 2. Each subset of the training set is called a fold. Typically, a five-fold cross-validation is used in practice. We would train five models (use $F_2 F_3 F_4 F_5$ for model 1 and so on) and compute the value of the metric of interest on each validation set, from $F_1$ to $F_5$ and get the average score.
+
+![cross validation](/images/cross_validation.png)
+
+3. Leave-one-out cross validation:
+
+![leave-one-out cross validation](/images/leave_one_out_validation.png)
 
 ## Neural Networks and Deep Learning
 
