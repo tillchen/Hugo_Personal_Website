@@ -130,35 +130,35 @@ This post is about some basic machine learning concepts.
 
 2. Loss functions:
 
-$$L_2(y, y') = (y-y')^2$$
+    $$L_2(y, y') = (y-y')^2$$
 
-$$L_{0-1}(g, g') = 0 \ (g=g') \ or \ 1 \ (g\neq g')$$
+    $$L_{0-1}(g, g') = 0 \ (g=g') \ or \ 1 \ (g\neq g')$$
 
-$$L_1(y,y') = |y-y'|$$
+    $$L_1(y,y') = |y-y'|$$
 
 3. Expected prediction error (EPE):
 
-$$EPE(f)=E(L_2(Y,f(X)))$$
+    $$EPE(f)=E(L_2(Y,f(X)))$$
 
-$$EPE(f)=E(L_{0-1}(G,f(X)))$$
+    $$EPE(f)=E(L_{0-1}(G,f(X)))$$
 
 4. The function f that minimizes EPE is give by: ($E(Y|X=x)$ is called a regressor/regression function)
 
-$$f(x)=E(Y|X=x)$$
+    $$f(x)=E(Y|X=x)$$
 
 5. Bayes classifier:
 
-$$f(x)=argmin_{g \in R_G}[1-p(g|x)] \Rightarrow$$
+    $$f(x)=argmin_{g \in R_G}[1-p(g|x)] \Rightarrow$$
 
-$$f(x)=\mathbf{g} \ if \ p(\mathbf{g}|x) = \max_{g \in R_G}p(g|x)$$
+    $$f(x)=\mathbf{g} \ if \ p(\mathbf{g}|x) = \max_{g \in R_G}p(g|x)$$
 
 6. Expected squared prediction error of $\hat f$ at location $x_0$:
 
-$$EPE(\hat f, x_0)=E(L_2(Y,f(X))|X=x_0)$$
+    $$EPE(\hat f, x_0)=E(L_2(Y,f(X))|X=x_0)$$
 
 7. Error = Irreducible Error + $\text{Bias}^2$ + Variance
 
-![error decomposition](/images/error_decomposition.png)
+    ![error decomposition](/images/error_decomposition.png)
 
 ## Fundamental Algorithms
 
@@ -166,11 +166,11 @@ $$EPE(\hat f, x_0)=E(L_2(Y,f(X))|X=x_0)$$
 
 1. We want a model as a linear combination of features of example x ($w$ is a D-dimensional vector of parameters and b is a real number.):
 
-$$f_{w,b}(x) = wx+b$$
+    $$f_{w,b}(x) = wx+b$$
 
 2. We find the optimal values $w^{\*}$ and $b^{\*}$ by minimizing the cost function below (the empirical risk - the average loss):
 
-$$\frac{1}{N}\sum_{i=1...N}(f_{w,b}(x_i)-y_i)^2$$
+    $$\frac{1}{N}\sum_{i=1...N}(f_{w,b}(x_i)-y_i)^2$$
 
 3. Overfitting: a model that predicts well for the training data but not for data unseen during training. Linear regression rarely overfits.
 
@@ -180,47 +180,47 @@ $$\frac{1}{N}\sum_{i=1...N}(f_{w,b}(x_i)-y_i)^2$$
 
 6. The linear model is an approximation for the regressor $E(Y|X)$ of the form: ($\beta_0$ is the intercept or bias)
 
-$$f_{\beta}(X) = \beta_0+\sum_{j=1}^DX_j\beta_j$$
+    $$f_{\beta}(X) = \beta_0+\sum_{j=1}^DX_j\beta_j$$
 
 7. By using $\beta = (\beta_0,...,\beta_D)^T$ and $Z=(1,X_1,...,X_D)^T$, we can rewrite the model to:
 
-$$f_{\beta}(Z)=Z^T\beta$$
+    $$f_{\beta}(Z)=Z^T\beta$$
 
 8. The least squares estimator (parameter estimator $\gamma$):
 
-$$\gamma = argmin_{\gamma}\sum_{i=1}^N(y_i-f_{\gamma}(x_i))^2$$
+    $$\gamma = argmin_{\gamma}\sum_{i=1}^N(y_i-f_{\gamma}(x_i))^2$$
 
 9. Solution for the estimator:
 
-![Linear Regression by Least Squares](/images/linear_regression_least_squares.png)
+    ![Linear Regression by Least Squares](/images/linear_regression_least_squares.png)
 
 10. The algorithm:
 
-![Linear Regression](/images/linear_regression.png)
+    ![Linear Regression](/images/linear_regression.png)
 
 11. Find local minimum/maximum:
 
-![min max](/images/min_max.png)
+    ![min max](/images/min_max.png)
 
-$$M \ \text{positive definite} \Leftrightarrow x^TMx>0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
+    $$M \ \text{positive definite} \Leftrightarrow x^TMx>0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
 
-$$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
+    $$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
 
 12. Statistical analysis with the additive noise:
 
-![statistical analysis](/images/analysis_for_linear_regression.png)
+    ![statistical analysis](/images/analysis_for_linear_regression.png)
 
-![variance](/images/variance.png)
+    ![variance](/images/variance.png)
 
-![z-score](/images/z_score.png)
+    ![z-score](/images/z_score.png)
 
-![z-score rule of thumb](/images/z_score_rule_of_thumb.png)
+    ![z-score rule of thumb](/images/z_score_rule_of_thumb.png)
 
-![z-score example](/images/z_score_example.png)
+    ![z-score example](/images/z_score_example.png)
 
 13. For a K-dimensional output:
 
-![linear regression K-D output](/images/linear_regression_k_d_output.png)
+    ![linear regression K-D output](/images/linear_regression_k_d_output.png)
 
 ### Logistic Regression
 
@@ -228,23 +228,23 @@ $$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \m
 
 2. The standard logistic function or the sigmoid function:
 
-$$f(x)=\frac{1}{1+e^{-x}}$$
+    $$f(x)=\frac{1}{1+e^{-x}}$$
 
-![Logistic Function](/images/logistic_function.png)
+    ![Logistic Function](/images/logistic_function.png)
 
 3. The logistic regression model:
 
-$$f(x)=\frac{1}{1+e^{-(wx+b)}}$$
+    $$f(x)=\frac{1}{1+e^{-(wx+b)}}$$
 
 4. For binary classification, we can say the label is positive if the probability is higher than or equal to 0.5.
 
 5. We optimize by using the maximum likelihood (the goodness of fit) ($y_i$ is either 0 or 1):
 
-$$L_{w,b}=\prod_{i=1...N}f_{w,b}(x_i)^{y_i}(1-f_{w,b}(x_i))^{1-y_i}$$
+    $$L_{w,b}=\prod_{i=1...N}f_{w,b}(x_i)^{y_i}(1-f_{w,b}(x_i))^{1-y_i}$$
 
 6. In practice, it's more convenient to maximize the log-likelihood (since ln is a strictly increasing function, maximizing this is the same as maximizing its argument):
 
-$$LogL_{w,b}=ln(L_{w,b})=\sum_{i=1}^Ny_iln(f_{w,b}(x_i)) + (1-y_i)ln(1-f_{w,b}(x_i))$$
+    $$LogL_{w,b}=ln(L_{w,b})=\sum_{i=1}^Ny_iln(f_{w,b}(x_i)) + (1-y_i)ln(1-f_{w,b}(x_i))$$
 
 7. Unlike linear regression, there's no closed form solution. A typical numerical optimization procedure is gradient descent.
 
@@ -276,21 +276,21 @@ To be filled.
 
 2. The closeness of two examples is given by a distance function. Other than the Euclidean distance, we could also use the cosine similarity function ($0^{\circ}: 1; 90^{\circ}: 0; 180^{\circ}: -1$).
 
-3.
+3. Algorithms
 
-![kNN regression](/images/kNN_regression.png)
+    ![kNN regression](/images/kNN_regression.png)
 
-![kNN classification](/images/kNN_classification.png)
+    ![kNN classification](/images/kNN_classification.png)
 
 4. The bias-variance decomposition:
 
-![kNN bias-variance decomposition](/images/kNN_bias_variance_decomposition.png)
+    ![kNN bias-variance decomposition](/images/kNN_bias_variance_decomposition.png)
 
 5. The bias-variance trade-off:
     * k=1: if $x_0$ is in the training data, the bias = 0; the largest variance. (similar to overfitting)
     * k=N: the largest bias (the predictor is constant); the smallest variance. (similar to underfitting)
 
-![kNN error example](/images/kNN_error_example.png)
+    ![kNN error example](/images/kNN_error_example.png)
 
 ## Anatomy of a Learning Algorithm
 
@@ -306,17 +306,17 @@ To be filled.
 
 2. The gradient is calculated by taking the partial derivative for every parameter in the loss function: (take linear regression as an example)
 
-$$l = \frac{1}{N}\sum_{i=1}^{N}(y_i-(wx_i+b))^2$$
+    $$l = \frac{1}{N}\sum_{i=1}^{N}(y_i-(wx_i+b))^2$$
 
-$$\frac{\partial l}{\partial w} = \frac{1}{N}\sum_{i=1}^{N}-2x_i(y_i-(wx_i+b))$$
+    $$\frac{\partial l}{\partial w} = \frac{1}{N}\sum_{i=1}^{N}-2x_i(y_i-(wx_i+b))$$
 
-$$\frac{\partial l}{\partial b} = \frac{1}{N}\sum_{i=1}^{N}-2(y_i-(wx_i+b))$$
+    $$\frac{\partial l}{\partial b} = \frac{1}{N}\sum_{i=1}^{N}-2(y_i-(wx_i+b))$$
 
 3. An epoch consists of using the training set entirely to update each parameter. At each epoch, we update $w$ and $b$ ($\alpha$ is the learning rate):
 
-$$w \leftarrow w - \alpha\frac{\partial l}{\partial w}$$
+    $$w \leftarrow w - \alpha\frac{\partial l}{\partial w}$$
 
-$$b \leftarrow b - \alpha\frac{\partial l}{\partial b}$$
+    $$b \leftarrow b - \alpha\frac{\partial l}{\partial b}$$
 
 4. Minibatch stochastic gradient descent is a version that speed up the computation by approximating the gradient using smaller batches.
 
@@ -358,7 +358,7 @@ $$b \leftarrow b - \alpha\frac{\partial l}{\partial b}$$
 
 1. Normalization converts a numerical value into a value typically in the interval [-1,1] or [0,1], which increases the speed of learning:
 
-$$\bar x^{(j)} = \frac{x^{(j)}-min^{(j)}}{max^{(j)}-min^{(j)}}$$
+    $$\bar x^{(j)} = \frac{x^{(j)}-min^{(j)}}{max^{(j)}-min^{(j)}}$$
 
 #### Standardization (Z-score Normalization)
 
@@ -366,7 +366,7 @@ $$\bar x^{(j)} = \frac{x^{(j)}-min^{(j)}}{max^{(j)}-min^{(j)}}$$
 
 2. Standard scores or z-scores can be calculated as follows:
 
-$$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
+    $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
 
 3. Normalization vs Standardization:
     * Unsupervised learning - standardization.
@@ -396,8 +396,7 @@ $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
 * Nonlinearity of the data (SVM/linear regression/linear kernel/logistic regression of lineraly separable data)
 * Training speed (neural networks are slow to train)
 * Prediction speed
-
-![scikit-learn cheat sheet](/images/ml_map.png)
+    ![scikit-learn cheat sheet](/images/ml_map.png)
 
 ### Three Sets
 
@@ -437,11 +436,11 @@ $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
 
 3. For linear regression, L1 looks like this ($|\mathbf{w}| = \sum_{i=1}^D|w^{(j)}|$ and C is a hyperparameter), which tries to set most $w^{(j)}$ to value small values or zero (|| means abs here):
 
-$$\min_{\mathbf{w},b} \left[C|\mathbf{w}| + \frac{1}{N}\sum_{i=1...N}(f_{\mathbf{w},b}(\mathbf{x}_i)-y_i)^2\right]$$
+    $$\min_{\mathbf{w},b} \left[C|\mathbf{w}| + \frac{1}{N}\sum_{i=1...N}(f_{\mathbf{w},b}(\mathbf{x}_i)-y_i)^2\right]$$
 
 4. For linear regression, L2 looks like this (($||\mathbf{w}||^2 = \sum_{i=1}^D(w^{(j)})^2$):
 
-$$\min_{\mathbf{w},b} \left[C||\mathbf{w}||^2 + \frac{1}{N}\sum_{i=1...N}(f_{\mathbf{w},b}(\mathbf{x}_i)-y_i)^2\right]$$
+    $$\min_{\mathbf{w},b} \left[C||\mathbf{w}||^2 + \frac{1}{N}\sum_{i=1...N}(f_{\mathbf{w},b}(\mathbf{x}_i)-y_i)^2\right]$$
 
 5. L1 produces a sparse model with most parameters equal to zero if C is large enough, which makes feature selection that decides which features are essential and increases explainability. L2 gives better results if our only goal is to maximize the performance on holdout sets. Plus L2 is differentiable - graident descent.
 
@@ -459,25 +458,25 @@ To be filled.
 
 1. Definition ($\tau$ is the training set):
 
-$$TE(\hat f, \tau) = \frac{1}{N}\sum_{i=1}^NL(y_i,\hat f(x_i))$$
+    $$TE(\hat f, \tau) = \frac{1}{N}\sum_{i=1}^NL(y_i,\hat f(x_i))$$
 
 #### Generalization/Test Error
 
 1. Definition ($\tau$ is a sample of the random variable T):
 
-$$
-GE(\hat f, \tau) = E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\
-= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\
-= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy
-$$
+    $$
+    GE(\hat f, \tau) = E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\
+    = \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\
+    = \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy
+    $$
 
 2. Expected generalization/test error
 
-$$
-EGE(\hat f, \tau) = E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\
-= \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\
-= \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
-$$
+    $$
+    EGE(\hat f, \tau) = E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\
+    = \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\
+    = \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
+    $$
 
 #### Validation Set Error Estimation
 
@@ -489,11 +488,11 @@ $$
 
 2. Each subset of the training set is called a fold. Typically, a five-fold cross-validation is used in practice. We would train five models (use $F_2 F_3 F_4 F_5$ for model 1 and so on) and compute the value of the metric of interest on each validation set, from $F_1$ to $F_5$ and get the average score.
 
-![cross validation](/images/cross_validation.png)
+    ![cross validation](/images/cross_validation.png)
 
 3. Leave-one-out cross validation:
 
-![leave-one-out cross validation](/images/leave_one_out_validation.png)
+    ![leave-one-out cross validation](/images/leave_one_out_validation.png)
 
 ## Neural Networks and Deep Learning
 
@@ -518,7 +517,7 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
 
 3. An example (each unit's parameters $w_{l,u}$ and $b_{l,u}$):
 
-![MLP](/images/mlp.png)
+    ![MLP](/images/mlp.png)
 
 #### Feed-Forward Neural Network Architecture
 
@@ -528,11 +527,11 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
 
 3. Popular choices for $g$ are the logistic function, TanH, and ReLU (rectified linear unit function):
 
-$$tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$$
+    $$tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$$
 
-$$relu(z) = 0 \ \ if \ z < 0$$
+    $$relu(z) = 0 \ \ if \ z < 0$$
 
-$$relu(z)= z \ \ otherwise$$
+    $$relu(z)= z \ \ otherwise$$
 
 ### Deep Learning
 
@@ -546,7 +545,33 @@ $$relu(z)= z \ \ otherwise$$
 
 #### Convolutional Neural Network
 
-To be filled.
+1. When our training examples are images, the input is very high-dimensional (each picture is a feature). If we use MLP, the optimization problem is likely to become intractable.
+
+2. A convolutional neural network (CNN) is a special kind of FFNN that significantly reduces the number of parameters. Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.
+
+3. We use the moving window approach and then train multiple smaller regression models at once, each small regression model receiving a square patch as input. The goal of each small regression model is to detect a specific kind of pattern in the input patch. To detect some pattern, a small regression model has to learn the parameters of a matrix $\mathbf{F}$ (filter).
+
+4. For example, if we have the following matrix $\mathbf{P}$ (patch) and $\mathbf{F}$, we can calculate the convolution of them. And the value is higher the more similar $\mathbf{F}$ is to $\mathbf{P}$. (The patch represents a pattern that looks like a cross.)
+
+    ![convolution](/images/convolution.png)
+
+5. For convenience, there's also a bias parameter b associated with each filter which is added to the result to a convolution.
+
+6. One layer of a CNN consists of multiple convolution filters. Each filter of the first layer slides - or convolves - across the input image, left to right, top to bottom.
+
+    ![convolving](/images/convolving.png)
+
+7. The filters and bias values are trainable parameters and are optimized using gradient descent with backpropagation.
+
+8. The subsequent layer treats the output of the preceding layer as a collection of image matrices. Such a collection is called a volume.
+
+    ![volume](/images/volume.png)
+
+9. Stride is the step size of the moving window. We can also use paddings.
+
+10. Pooling is a layer that applies a fixed operator, usually either max or average instead of applying a trainable filter. It increases the accuracy and improves the training speed by reducing the number of parameters. (The one below uses max.)
+
+    ![pooling](/images/pooling.png)
 
 #### Recurrent Neural Network
 
@@ -560,11 +585,11 @@ To be filled.
 
 2. The simplest kernel regression looks like this (the function $k(\cdot)$ is called a kernel, which plays the role of a similarity function - $w_i$ is higher when x is similar to $x_i$):
 
-$$f(x)=\frac{1}{N}\sum_{i=1}^{N}w_iy_i, \ where \ w_i = \frac{Nk(\frac{x_i - x}{b})}{\sum_{l=1}^Nk(\frac{x_l - x}{b})}$$
+    $$f(x)=\frac{1}{N}\sum_{i=1}^{N}w_iy_i, \ where \ w_i = \frac{Nk(\frac{x_i - x}{b})}{\sum_{l=1}^Nk(\frac{x_l - x}{b})}$$
 
 3. Kernels can have different forms, the most frequently used is the Gaussian kernel:
 
-$$k(z)=\frac{1}{\sqrt{2\pi}}exp(\frac{-z^2}{2})$$
+    $$k(z)=\frac{1}{\sqrt{2\pi}}exp(\frac{-z^2}{2})$$
 
 ### Multiclass Classification
 
@@ -654,7 +679,7 @@ To be filled.
 
 1. Example:
 
-![PCA](/images/pca.png)
+    ![PCA](/images/pca.png)
 
 2. Principal components are vectors that define a new coordinate system in which the first axis goes in the direction of the highest variance in the data. The second axis is orthogonal to the first one and goes in the direction of the second highest variance in the data. The length of the arrow reflects the variance in the direction.
 
