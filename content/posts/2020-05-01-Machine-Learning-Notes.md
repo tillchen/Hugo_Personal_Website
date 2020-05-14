@@ -52,6 +52,7 @@ tags = ["Machine Learning", "AI"]
     * [Recurrent Neural Network](#recurrent-neural-network)
 * [Problems and Solutions](#problems-and-solutions)
   * [Kernel Regression](#kernel-regression)
+  * [Classification](#classification)
   * [Multiclass Classification](#multiclass-classification)
   * [One-Class Classification](#one-class-classification)
   * [Multi-Label Classification](#multi-label-classification)
@@ -590,6 +591,18 @@ To be filled.
 3. Kernels can have different forms, the most frequently used is the Gaussian kernel:
 
     $$k(z)=\frac{1}{\sqrt{2\pi}}exp(\frac{-z^2}{2})$$
+
+### Classification
+
+1. Decision boundary: the set of points at which the probability of x to be in either of the classes is equal:
+
+    $$\{x \in \mathbb{R}_X|p(1|x)=p(2|x)\}$$
+
+2. The classification is linear if the decision boundaries are linear.
+
+3. Classification by linear regression of indicator matrix:
+
+    ![classification by linear regression](/images/classification_by_linear_regression.png)
 
 ### Multiclass Classification
 
