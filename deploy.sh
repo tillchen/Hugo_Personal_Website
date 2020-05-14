@@ -23,3 +23,13 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
+
+cd ..
+
+git add .
+
+msg="updated posts $(date)"
+
+git commit -m "$msg"
+
+git push
