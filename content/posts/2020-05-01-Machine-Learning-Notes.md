@@ -195,6 +195,18 @@ $$M \ \text{positive definite} \Leftrightarrow x^TMx>0 \ \text{for all }x \in \m
 
 $$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \mathbb{R}^n \backslash \mathbf{0}$$
 
+12. Statistical analysis with the additive noise:
+
+![statistical analysis](/images/analysis_for_linear_regression.png)
+
+![variance](/images/variance.png)
+
+![z-score](/images/z_score.png)
+
+![z-score rule of thumb](/images/z_score_rule_of_thumb.png)
+
+![z-score example](/images/z_score_example.png)
+
 ### Logistic Regression
 
 1. Logistic regression is not a regression, but a classification learning algorithm. The names is because the mathematical formulation is similar to linear regression.
