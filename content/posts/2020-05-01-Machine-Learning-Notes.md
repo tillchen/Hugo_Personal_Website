@@ -217,7 +217,7 @@ $$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \m
 
 13. For a K-dimensional output:
 
-![linear regression K-D output](../../static/images/linear_regression_k_d_output.png)
+![linear regression K-D output](/images/linear_regression_k_d_output.png)
 
 ### Logistic Regression
 
@@ -278,6 +278,16 @@ To be filled.
 ![kNN regression](/images/kNN_regression.png)
 
 ![kNN classification](/images/kNN_classification.png)
+
+4. The bias-variance decomposition:
+
+![kNN bias-variance decomposition](images/kNN_bias_variance_decomposition.png)
+
+5. The bias-variance trade-off:
+    * k=1: if $x_0$ is in the training data, the bias = 0; the largest variance. (similar to overfitting)
+    * k=N: the largest bias (the predictor is constant); the smallest variance. (similar to underfitting)
+
+![kNN error example](/images/kNN_error_example.png)
 
 ## Anatomy of a Learning Algorithm
 
