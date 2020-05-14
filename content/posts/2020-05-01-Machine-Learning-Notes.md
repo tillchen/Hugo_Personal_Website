@@ -207,6 +207,10 @@ $$M \ \text{negative definite} \Leftrightarrow x^TMx<0 \ \text{for all }x \in \m
 
 ![z-score example](/images/z_score_example.png)
 
+13. For a K-dimensional output:
+
+![linear regression K-D output](../../static/images/linear_regression_k_d_output.png)
+
 ### Logistic Regression
 
 1. Logistic regression is not a regression, but a classification learning algorithm. The names is because the mathematical formulation is similar to linear regression.
