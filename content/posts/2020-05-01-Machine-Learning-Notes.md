@@ -281,7 +281,7 @@ To be filled.
 
 4. The bias-variance decomposition:
 
-![kNN bias-variance decomposition](images/kNN_bias_variance_decomposition.png)
+![kNN bias-variance decomposition](/images/kNN_bias_variance_decomposition.png)
 
 5. The bias-variance trade-off:
     * k=1: if $x_0$ is in the training data, the bias = 0; the largest variance. (similar to overfitting)
