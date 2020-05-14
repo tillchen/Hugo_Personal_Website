@@ -39,6 +39,8 @@ tags = ["Machine Learning", "AI"]
   * [Regularization](#regularization)
   * [Model Performance Assessment](#model-performance-assessment)
   * [Hyperparameter Tuning](#hyperparameter-tuning)
+    * [Training Error](#training-error)
+    * [Generalization/Test Error](#generalizationtest-error)
     * [Cross-Validation](#cross-validation)
 * [Neural Networks and Deep Learning](#neural-networks-and-deep-learning)
   * [Neural Networks](#neural-networks)
@@ -411,7 +413,7 @@ $$\hat x^{(j)} = \frac{x^{(j)} - \mu^{(j)}}{\sigma^{(j)}}$$
     * The model is too simple.
     * The features are not informative enough.
 
-2. Overfitting: the model predicts very well the training data but poorly the data from the holdout sets. - high variance (the error due to the sensitivity to small fluctuations in the training set) (variance is the difference in fits between data sets - consistency)
+2. Overfitting: the model predicts very well the training data but poorly the data from the holdout sets. - high variance (the error due to the sensitivity to small fluctuations in the training set) (variance is the difference in fits between data sets - consistency) (large generalization error)
     * The model is too complex.
     * Too many features but a small number of training examples.
 
@@ -451,6 +453,30 @@ To be filled.
 ### Hyperparameter Tuning
 
 To be filled.
+
+#### Training Error
+
+1. Definition ($\tau$ is the training set):
+
+$$TE(\hat f, \tau) = \frac{1}{N}\sum_{i=1}^NL(y_i,\hat f(x_i))$$
+
+#### Generalization/Test Error
+
+1. Definition ($\tau$ is a sample of the random variable T):
+
+$$
+GE(\hat f, \tau) = E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\
+= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\
+= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy
+$$
+
+2. Expected generalization/test error
+
+$$
+EGE(\hat f, \tau) = E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\
+= \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\
+= \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
+$$
 
 #### Cross-Validation
 
