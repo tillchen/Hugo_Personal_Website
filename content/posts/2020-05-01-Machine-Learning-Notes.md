@@ -596,7 +596,7 @@ To be filled.
 
 1. Decision boundary: the set of points at which the probability of x to be in either of the classes is equal:
 
-    $$\{x \in \mathbb{R}_X|p(1|x)=p(2|x)\}$$
+    $$\\{x \in \mathbb{R}_X|p(1|x)=p(2|x)\\}$$
 
 2. The classification is linear if the decision boundaries are linear.
 
