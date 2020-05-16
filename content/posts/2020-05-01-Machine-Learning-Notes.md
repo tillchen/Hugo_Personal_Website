@@ -38,6 +38,11 @@ tags = ["Machine Learning", "AI"]
   * [Underfitting and Overfitting](#underfitting-and-overfitting)
   * [Regularization](#regularization)
   * [Model Performance Assessment](#model-performance-assessment)
+    * [Confusion Matrix](#confusion-matrix)
+    * [Precision/Recall](#precisionrecall)
+    * [Accuracy](#accuracy)
+    * [Cost-Sensitive Accuracy](#cost-sensitive-accuracy)
+    * [Area under the ROC Curve (AUC)](#area-under-the-roc-curve-auc)
   * [Hyperparameter Tuning](#hyperparameter-tuning)
     * [Training Error](#training-error)
     * [Generalization/Test Error](#generalizationtest-error)
@@ -53,6 +58,7 @@ tags = ["Machine Learning", "AI"]
 * [Problems and Solutions](#problems-and-solutions)
   * [Kernel Regression](#kernel-regression)
   * [Classification](#classification)
+    * [Linear Discriminant Analysis](#linear-discriminant-analysis)
   * [Multiclass Classification](#multiclass-classification)
   * [One-Class Classification](#one-class-classification)
   * [Multi-Label Classification](#multi-label-classification)
@@ -449,6 +455,39 @@ To be filled.
 
 ### Model Performance Assessment
 
+1. For regression, we first compare our model with the mean model, which always predicts the average of the labels in the training data. If the fit or our model is better than the mean model, we compare the MSE (mean squared error) for the training and test data. If the MSE for the test data is substantially higher, it is a sign of overfitting.
+
+2. For classification, we have the following metrics and tools:
+
+#### Confusion Matrix
+
+1. The confusion matrix is a table that summarizes how successful the classification model at predicting examples belonging to various classes.
+
+2. Take a binary classification problem as an example:
+
+    | | spam (predicted) | not_spam (predicted)
+    --- | --- | ---
+    spam (actual) | 23 (TP) | 1 (FN)
+    not_spam (actual) | 12 (FP) | 556 (TN)
+
+    TP - True Positive; FN - False Negative;
+
+    FP - False Positive; TN - True Negative;
+
+#### Precision/Recall
+
+To be filled.
+
+#### Accuracy
+
+To be filled.
+
+#### Cost-Sensitive Accuracy
+
+To be filled.
+
+#### Area under the ROC Curve (AUC)
+
 To be filled.
 
 ### Hyperparameter Tuning
@@ -603,6 +642,19 @@ To be filled.
 3. Classification by linear regression of indicator matrix:
 
     ![classification by linear regression](/images/classification_by_linear_regression.png)
+
+#### Linear Discriminant Analysis
+
+1. Linear Discriminant analysis (LDA) is a method used to find a linear combination of features that characterizes or separates two or more classes of objects or events. The resulting combination may be used as a linear classifier, or, more commonly, for dimensionality reduction before later classification.
+
+2. The mathematical definition and the algorithm:
+
+    ![LDA](/images/LDA.png)
+    ![LDA algorithm](/images/LDA_algorithm.png)
+
+3. LDA ia linear predictor.
+
+4. A non-linear classification predictor can be obtained if we use $N(\mu_g, \Sigma_g)$ instead of $N(\mu_g, \Sigma)$, i.e. a class dependent covariance.
 
 ### Multiclass Classification
 
