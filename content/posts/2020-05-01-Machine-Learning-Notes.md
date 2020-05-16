@@ -710,7 +710,22 @@ To be filled.
 
 ### Clustering
 
-Clustering is a problem of learning to assign a label to examples by leveraging an unlabeled dataset.
+1. Clustering is a problem of learning to assign a label to examples by leveraging an unlabeled dataset.
+
+2. A dissimilarity function measures the difference / lack of affinity between two observations from X. It holds that $d(x,x) = 0$ and $d(x,x')=d(x',x)$. Some examples:
+    * Squared Euclidean Distance: $d(x,x')=\sum_{j=1}^D(x_j-x_{j}')^2$
+    * Componentwise Distance: $d(x,x')=\sum_{j=1}^D|x_j-x_{j}'|$
+    * Weighted Squared Euclidean Distance: $d(x,x')=\sum_{j=1}^Dw_j(x_j-x_{j}')^2$
+
+3. In combinatorial clustering, we look for an encoder $C:\\{1,..,N\\} \rightarrow \\{1,..,K\\}$ that assigns each sample $x_i$ a label or cluster $k = C(i)$ such that a given loss is minimized.
+
+4. The canonical loss for the encoder:
+
+    $$L(C) = \frac{1}{2}\sum_{k=1}^K\sum_{C(i)=k}\sum_{C_(i')=k}d(x_i,x_{i'})$$
+
+5. We can use centroids ($\bar x_k = \frac{1}{N_k}\sum_{C(i)=k}x_i$) to simplify the loss function
+
+    $$L(C)=\sum_{k=1}^KN_k\sum_{C(i)=k}||x_i=\bar x_k||^2$$
 
 #### K-Means
 
@@ -719,6 +734,9 @@ Clustering is a problem of learning to assign a label to examples by leveraging 
 3. Compute the distance from each example x to each centroid c using some metric, like the Euclidean distance. Assign the closest centroid to each example.
 4. For each centroid, calculate the average feature vector of the examples labeled with it. The average feature vectors become the new locations of the centroids.
 5. Recompute the distance from each example to each centroid, modify the assignment and repeat the procedure until the assignments don't change after the centroid locations were recomputed.
+6. The algorithm (using iterative greedy descent):
+
+    ![k-means](/images/k_means.png)
 
 #### DBSCAN and HDBSCAN
 
