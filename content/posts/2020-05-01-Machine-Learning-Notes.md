@@ -56,6 +56,8 @@ tags = ["Machine Learning", "AI"]
     * [Convolutional Neural Network](#convolutional-neural-network)
     * [Recurrent Neural Network](#recurrent-neural-network)
 * [Problems and Solutions](#problems-and-solutions)
+  * [Basis Expansions](#basis-expansions)
+    * [Regression with Gaussian Kernel](#regression-with-gaussian-kernel)
   * [Kernel Regression](#kernel-regression)
   * [Classification](#classification)
     * [Linear Discriminant Analysis](#linear-discriminant-analysis)
@@ -618,6 +620,27 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
 To be filled.
 
 ## Problems and Solutions
+
+### Basis Expansions
+
+1. Basis expansion extends the linear model to a non-linear model. We achieve this by introducing basis functions $\phi_m (X)$.
+
+2. Definition:
+
+    ![basis expansion](/images/basis_expansion.png)
+
+3. For quadratic polynomial regression, our basis functions will be: $\phi_1(x)=1, \ \phi_2(x)=x, \ \phi_3(x)=x^2$
+
+#### Regression with Gaussian Kernel
+
+1. The Gaussian kernel ($\sigma^2$ is a scaler parameter, i.e. the variance or kernel width):
+
+    $$k(x,x')=e^{-\frac{||x-x'||^2}{\sigma^2}}$$
+
+2. Regression for kernel-based model:
+
+    ![kernel-based regression](/images/kernel_based_regression.png)
+    ![kernel algorithm](/images/kernel_algorithm.png)
 
 ### Kernel Regression
 
