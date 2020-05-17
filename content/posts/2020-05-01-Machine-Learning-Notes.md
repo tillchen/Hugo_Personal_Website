@@ -462,10 +462,10 @@ To be filled.
 
 2. So we limit the size of coefficients (shrinkage) (a larger $\lambda$ means stronger shrinkage. The value is optimized by cross validation.):
 
-    ![ridge regression](../../static/images/ridge_regression.png)
-    ![ridge regression estimator](../../static/images/ridge_regression_estimator.png)
-    ![kernel ridge regression](../../static/images/kernel_ridge_regression.png)
-    ![kernel ridge regression algorithm](../../static/images/kernel_ridge_regression_algorithm.png)
+    ![ridge regression](/images/ridge_regression.png)
+    ![ridge regression estimator](/images/ridge_regression_estimator.png)
+    ![kernel ridge regression](/images/kernel_ridge_regression.png)
+    ![kernel ridge regression algorithm](/images/kernel_ridge_regression_algorithm.png)
 
 ### Model Performance Assessment
 
