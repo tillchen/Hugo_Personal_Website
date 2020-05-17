@@ -616,6 +616,11 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
 
 3. Backpropagation is an efficient algorithm for computing gradients on neural networks using the chain rule. (It's used to update the parameters.)
 
+4. For overfitting:
+    * Early stopping in training.
+    * $L_2$ regularization.
+    * Add dropout layer.
+
 #### Convolutional Neural Network
 
 1. When our training examples are images, the input is very high-dimensional (each picture is a feature). If we use MLP, the optimization problem is likely to become intractable.
