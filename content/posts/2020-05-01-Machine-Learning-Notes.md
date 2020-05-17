@@ -322,13 +322,23 @@ To be filled.
 
     $$\frac{\partial l}{\partial b} = \frac{1}{N}\sum_{i=1}^{N}-2(y_i-(wx_i+b))$$
 
-3. An epoch consists of using the training set entirely to update each parameter. At each epoch, we update $w$ and $b$ ($\alpha$ is the learning rate):
+3. An epoch consists of using the training set entirely to update each parameter. (One sweep through full training data.) At each epoch, we update $w$ and $b$ ($\alpha$ is the learning rate):
 
     $$w \leftarrow w - \alpha\frac{\partial l}{\partial w}$$
 
     $$b \leftarrow b - \alpha\frac{\partial l}{\partial b}$$
 
 4. Minibatch stochastic gradient descent is a version that speed up the computation by approximating the gradient using smaller batches.
+
+5. Issues with batch GD:
+    * Might get stuck in local minimum.
+    * One update, very expensive for large N.
+
+6. Stochastic gradient descent: use only one training sample to do update. (In each step, pick randomly and update)
+    * Each step is cheap.
+    * Can easily escape local minima.
+    * Many more steps necessary.
+    * Jumping around the solution.
 
 ### Particularities
 
@@ -572,6 +582,15 @@ $$\mathbf{f}_l(\mathbf{z}) = \mathbf{g}_l(\mathbf{W}_l\mathbf{z} + \mathbf{b}_l)
 3. An example (each unit's parameters $w_{l,u}$ and $b_{l,u}$):
 
     ![MLP](/images/mlp.png)
+
+4. A more rigorous definition:
+
+    ![multilayer perceptron](/images/multilayer_perceptron.png)
+
+5. We can do regression/classification by optimizing the weight $\omega \ \alpha$.
+    * Highly non-linear, non-convex -> many local minima.
+    * $\omega \ \alpha$ often strongly underdetermined.
+    * No closed form formula -> use gradient descent.
 
 #### Feed-Forward Neural Network Architecture
 
