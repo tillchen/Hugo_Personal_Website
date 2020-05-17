@@ -764,9 +764,25 @@ To be filled.
 
     ![PCA](/images/pca.png)
 
-2. Principal components are vectors that define a new coordinate system in which the first axis goes in the direction of the highest variance in the data. The second axis is orthogonal to the first one and goes in the direction of the second highest variance in the data. The length of the arrow reflects the variance in the direction.
+2. Principal components are vectors that define a new coordinate system in which the first axis goes in the direction of the highest variance in the data. The second axis is orthogonal to the first one and goes in the direction of the second highest variance in the data. The length of the arrow reflects the variance in the direction. They form the orthogonal basis.
 
 3. If we want to reduce the dimensionality to $D_{new} < D$, we pick $D_{new}$ largest principal components and project our data points on them. For 2D, we can set $D_{new} = 1$ and get the projected orange points in the figure. To describe each orange point, we need only one coordinate instead of two: the coordinate with respect to the first principal component.
+
+4. For data compression/ dimensionality reduction, we aim to look for a lower-dimensional representation / compression of data (lossy compression, ${W}_d \ {V}_d$ are matrices for compression and decompression respectively):
+
+    $$z_i = comp_d (x_i)$$
+    $$x_i \approx \hat x_i = decomp_d (z_i)$$
+    $$(\hat{V_d}, \hat{W_d}) = argmin_{W_d, {V}_d} \sum_{i=1}^N||x_i-V_d {W}_d x_i||^2$$
+
+5. For the matrix above ($\hat{V_d}$), it's orthonormal and $\hat{W_d} = \hat{V_d^T}$. So we can rewrite our minimization problem (the columns of $\hat {V}_d$ are called principle components, which are ordered by importance):
+
+    $$\hat {V_d} = argmin_{V_d} \sum_{i=1}^N||x_i-V_d V_d^T x_i||^2$$
+
+6. Algorithms (svd -> singular value)
+
+    ![PCA algorithm](/images/PCA_algorithm.png)
+    ![compression](/images/compression.png)
+    ![decompression](/images/decompression.png)
 
 #### UMAP
 
