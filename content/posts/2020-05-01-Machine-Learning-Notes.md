@@ -37,6 +37,7 @@ tags = ["Machine Learning", "AI"]
   * [Three Sets](#three-sets)
   * [Underfitting and Overfitting](#underfitting-and-overfitting)
   * [Regularization](#regularization)
+    * [Shrinkage: Ridge Regression](#shrinkage-ridge-regression)
   * [Model Performance Assessment](#model-performance-assessment)
     * [Confusion Matrix](#confusion-matrix)
     * [Precision/Recall](#precisionrecall)
@@ -454,6 +455,17 @@ To be filled.
 5. L1 produces a sparse model with most parameters equal to zero if C is large enough, which makes feature selection that decides which features are essential and increases explainability. L2 gives better results if our only goal is to maximize the performance on holdout sets. Plus L2 is differentiable - graident descent.
 
 6. L1 and L2 are the special cases for elastic net regularization. L1 - lasso; L2 - ridge regularization.
+
+#### Shrinkage: Ridge Regression
+
+1. Motivation: linear and basis expansion regression can lead to "non-full" column rank.
+
+2. So we limit the size of coefficients (shrinkage) (a larger $\lambda$ means stronger shrinkage. The value is optimized by cross validation.):
+
+    ![ridge regression](../../static/images/ridge_regression.png)
+    ![ridge regression estimator](../../static/images/ridge_regression_estimator.png)
+    ![kernel ridge regression](../../static/images/kernel_ridge_regression.png)
+    ![kernel ridge regression algorithm](../../static/images/kernel_ridge_regression_algorithm.png)
 
 ### Model Performance Assessment
 
