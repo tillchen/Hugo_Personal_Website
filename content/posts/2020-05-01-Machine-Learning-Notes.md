@@ -529,17 +529,21 @@ To be filled.
 1. Definition ($\tau$ is a sample of the random variable T):
 
     $$
-    GE(\hat f, \tau) = E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\
-    = \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\
-    = \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy
+    \begin{align}
+    GE(\hat f, \tau) &= E_{X,Y}(L(Y, \hat f_T(X))|T=\tau) \\\\
+    &= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy \\\\
+    &= \int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\frac{\rho(x,y,\tau)}{\rho_\tau\tau}dxdy
+    \end{align}
     $$
 
 2. Expected generalization/test error
 
     $$
-    EGE(\hat f, \tau) = E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\
-    = \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\
-    = \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
+    \begin{align}
+    EGE(\hat f, \tau) &= E_T(E_{X,Y}(L(Y, \hat f_T(X))|T=\tau)) \\\\
+    &= \int_{R_T}(\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y|\tau)dxdy)\rho(\tau)d\tau \\\\
+    &= \int_{R_T}\int_{R_Y}\int_{R_X}L(y, \hat f_T(x))\rho(x,y,\tau) dxdyd\tau
+    \end{align}
     $$
 
 #### Validation Set Error Estimation
@@ -784,7 +788,7 @@ To be filled.
 
 5. We can use centroids ($\bar x_k = \frac{1}{N_k}\sum_{C(i)=k}x_i$) to simplify the loss function
 
-    $$L(C)=\sum_{k=1}^KN_k\sum_{C(i)=k}||x_i=\bar x_k||^2$$
+    $$L(C)=\sum_{k=1}^KN_k\sum_{C(i)=k}||x_i - \bar x_k||^2$$
 
 #### K-Means
 
