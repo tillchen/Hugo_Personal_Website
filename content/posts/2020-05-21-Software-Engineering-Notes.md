@@ -17,6 +17,7 @@ tags = ["Software Engineering"]
   * [Compiling and Linking](#compiling-and-linking)
   * [Defensive Programming](#defensive-programming)
   * [Configuration, Version, and Release Management](#configuration-version-and-release-management)
+  * [Software Testing](#software-testing)
 * [Web and Other Applications](#web-and-other-applications)
 * [Project and Process Management](#project-and-process-management)
 * [Security and Ethics](#security-and-ethics)
@@ -200,6 +201,43 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
     * Composition model = set of objects -- module oriented
     * Change set model = bundle of changes -- dynamic
     * Long transaction model = all changes all isolated into transactions -- collaborative
+
+### Software Testing
+
+1. Software testing: find errors before delivering to the end user.
+
+2. Unit testing: (code)
+    * Test driver = dummy environment
+    * Test stub = dummy methods
+    * Equivalence class testing: build equivalence classes and test one candidate per class.
+
+3. Integration testing: (design)
+    * Test interactions among units (e.g. type compatibility)
+
+4. System testing: (requirements)
+    * Determine whether system meets requirements
+    * Focus on use & interaction
+    * Alpha & Beta testing
+
+5. Acceptance testing: (users' need)
+    * Get approval from customers
+
+6. Testing methods:
+    * Static testing - without executing the software
+      * Static analysis = control flow + data flow analysis
+      * Formal verification
+    * Dynamic testing - with executing the software
+      * Black-box testing: spec based
+      * White-box testing: look inside to check all statements & conditions have been executed at least once
+      * Coverage analysis: measures how much of the code has been exercised
+        * Statement vs decision vs path coverage
+        * Independent paths V(G) = number of simple decisions + 1 or number of enclosed areas + 1
+        * C0 = every instruction; C1 = every branch; C2, C3 - every condition once true once false; C4 path coverage; Rule of thumb: 95% C0, 70% C1
+      * Memory leaks:
+          * Stack: automatic management
+          * Heap: explicit allocation and deallocation
+      * Performance profiling: benchmark execution to understand where time is being spent
+    * Regression testing: run tests and compare the output to same tests on the previous code version
 
 ## Web and Other Applications
 
