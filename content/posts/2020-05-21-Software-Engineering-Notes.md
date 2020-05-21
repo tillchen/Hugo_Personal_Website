@@ -19,6 +19,12 @@ tags = ["Software Engineering"]
   * [Configuration, Version, and Release Management](#configuration-version-and-release-management)
   * [Software Testing](#software-testing)
 * [Web and Other Applications](#web-and-other-applications)
+  * [Application Architectures](#application-architectures)
+  * [GUI Technology](#gui-technology)
+  * [Web-Enabled Information Systems](#web-enabled-information-systems)
+  * [UI Design](#ui-design)
+  * [Web Design](#web-design)
+  * [Web Design Patterns](#web-design-patterns)
 * [Project and Process Management](#project-and-process-management)
 * [Security and Ethics](#security-and-ethics)
 
@@ -240,6 +246,24 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
     * Regression testing: run tests and compare the output to same tests on the previous code version
 
 ## Web and Other Applications
+
+### Application Architectures
+
+1. Application Types
+    * Data processing
+    * Transaction processing
+    * Event processing
+    * Language processing
+
+### GUI Technology
+
+### Web-Enabled Information Systems
+
+### UI Design
+
+### Web Design
+
+### Web Design Patterns
 
 ## Project and Process Management
 
