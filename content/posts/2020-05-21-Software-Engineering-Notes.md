@@ -377,4 +377,16 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
 
 6. Use incremental dev for best understood requirements and throw-away prototyping for poorly understood.
 
+7. Capability Maturity Model Integration:
+    * CMM Levels:
+      * Initial
+      * Managed
+      * Defined
+      * Quantitatively Managed
+      * Optimizing
+    * CMMI Components:
+      * 24 process areas
+      * Goals
+      * Practices
+
 ## Security and Ethics
