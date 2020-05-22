@@ -257,6 +257,31 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
 
 ### GUI Technology
 
+1. Sequential programs
+
+2. Modern GUI:
+    * Event-driven: the program waits on the user instead of the other way around
+      * All events go to a single event queue
+    * Widgets (window gadget): reusable interactive object
+      * Handle events
+      * Update appearance
+      * Generate new events
+      * Send to listeners (custom code)
+    * Interactor Tree: decompose interactive objects into a tree
+
+3. Model-View-Controller:
+    * Model = information the app is manipulating (representation of real world objects)
+    * View = a visual representation of the model
+      * View will be notified if there are changes for the model
+    * Controller:
+      * Receives input events
+      * Decides what to do
+        * Communicates with the view to select the objects
+        * Calls model methods to make changes
+    * Why?
+      * Combining MVC into one class will not scale
+      * Separation eases maintenance
+
 ### Web-Enabled Information Systems
 
 ### UI Design
