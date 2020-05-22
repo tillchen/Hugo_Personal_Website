@@ -26,6 +26,7 @@ tags = ["Software Engineering"]
   * [Web Design](#web-design)
 * [Project and Process Management](#project-and-process-management)
   * [Project Management](#project-management)
+  * [Software Process Models](#software-process-models)
 * [Security and Ethics](#security-and-ethics)
 
 ## Introduction
@@ -334,5 +335,33 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
 2. Task & Activity Flow Chart = Project Evaluation and Review Technique (PERT chart) - shows relationships between activities.
 
 3. PMs do planning, estimating, and scheduling.
+
+### Software Process Models
+
+1. Waterfall Model:
+    * Partitioning into distinct stages - inflexible
+    * Few business systems have stable requirements
+    * Only appropriate when requirements are well-understood and fairly stable
+
+2. Incremental Methods:
+    * Break into increments
+    * User requirements are prioritized
+    * The requirements are frozen once the increment is started
+    * Early increments act as a prototype which helps elicit requirements for later increments
+    * Lower risk of failure
+
+3. Agile/XP Methods, Scrum
+    * The agile manifesto: value
+      * individuals and interactions over processes and tools
+      * working software over comprehensive documentation
+      * customer collaboration over contract negotiation
+      * responding to change over following a plan
+    * Principles: (CIPCS)
+      * Customer involvement
+      * Incremental delivery
+      * People, not process
+      * Embrace change
+      * Maintain simplicity
+    * Extreme programming: very small increments (constant code improvement (refactoring))
 
 ## Security and Ethics
