@@ -311,6 +311,13 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
 
 ### Web Design
 
+1. Principles:
+    * Anticipation
+    * Communication
+    * Consistency
+    * Controlled autonomy
+    * Efficiency
+
 ### Web Design Patterns
 
 ## Project and Process Management
