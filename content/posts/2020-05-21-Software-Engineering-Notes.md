@@ -364,4 +364,17 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
       * Maintain simplicity
     * Extreme programming: very small increments (constant code improvement (refactoring))
 
+4. Iterative/Spiral Methods:
+    * Loop = one phase
+    * No fixed phases
+
+5. Evolutionary Development:
+    * Evolve final system from initial outline spec
+    * Throw-away prototyping - start with poorly understood requirements
+    * Good for well isolated parts (UI)
+    * Lack of process visibility
+    * Often poorly structured
+
+6. Use incremental dev for best understood requirements and throw-away prototyping for poorly understood.
+
 ## Security and Ethics
