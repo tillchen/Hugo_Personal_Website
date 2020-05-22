@@ -291,6 +291,24 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
 
 ### UI Design
 
+1. UI should match skills, experience, and expectations of its anticipated users.
+
+2. The human factors;:
+    * Limited short-term memory
+    * People make mistakes
+    * People are different
+    * People have different interaction preferences
+
+3. Pressman's Golden Rules:
+    * Place user in control
+    * Reduce user's memory load
+    * Make interface consistent
+
+4. UI design involves:
+    * User analysis
+    * System prototyping
+    * Prototype evaluation
+
 ### Web Design
 
 ### Web Design Patterns
