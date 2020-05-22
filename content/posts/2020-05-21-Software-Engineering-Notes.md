@@ -24,8 +24,8 @@ tags = ["Software Engineering"]
   * [Web-Enabled Information Systems](#web-enabled-information-systems)
   * [UI Design](#ui-design)
   * [Web Design](#web-design)
-  * [Web Design Patterns](#web-design-patterns)
 * [Project and Process Management](#project-and-process-management)
+  * [Project Management](#project-management)
 * [Security and Ethics](#security-and-ethics)
 
 ## Introduction
@@ -318,8 +318,21 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
     * Controlled autonomy
     * Efficiency
 
-### Web Design Patterns
-
 ## Project and Process Management
+
+### Project Management
+
+1. Activity organization:
+    * Activities should produce tangible outputs at well-defined points
+    * Milestones: end-point of a process activity
+    * Deliverables: projects results
+    * Rules:
+      * Design tasks as self-contained units with clear goals
+      * Concurrent tasks
+      * Minimize dependencies
+
+2. Task & Activity Flow Chart = Project Evaluation and Review Technique (PERT chart) - shows relationships between activities.
+
+3. PMs do planning, estimating, and scheduling.
 
 ## Security and Ethics
