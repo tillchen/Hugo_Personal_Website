@@ -27,7 +27,7 @@ tags = ["Software Engineering"]
 * [Project and Process Management](#project-and-process-management)
   * [Project Management](#project-management)
   * [Software Process Models](#software-process-models)
-* [Security and Ethics](#security-and-ethics)
+* [Security](#security)
 
 ## Introduction
 
@@ -389,4 +389,11 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
       * Goals
       * Practices
 
-## Security and Ethics
+## Security
+
+1. Motivation (objectives):
+    * Secrecy - users should not be able to *see* things they are not supposed to
+    * Integrity - users should not be able to *modify* things they are not supposed to
+    * Availability - users should be able to *see and modify* things they are allowed to
+
+2. 3P security management: process; people; probing your defences
