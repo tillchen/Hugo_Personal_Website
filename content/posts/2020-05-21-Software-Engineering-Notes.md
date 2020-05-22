@@ -284,6 +284,11 @@ This is the course notes for Software Engineering at Jacobs University Bremen.
 
 ### Web-Enabled Information Systems
 
+1. Three-Tier Architecture:
+    * Presentation tier
+    * Middle tier
+    * Data management tier
+
 ### UI Design
 
 ### Web Design
