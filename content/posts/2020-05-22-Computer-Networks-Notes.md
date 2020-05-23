@@ -443,7 +443,20 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### Resource Records
 
+1. Resource Records (RRs) hold typed info for a given name with the components:
+    * Owner - domain name
+    * Type - A(IPv4 address)/AAAA(IPv6 address)/CNAME(Canonical Name)/HINFO(Host Info)/MX(Mail Exchanger)/NS(authoritative server)/PTR(pointer to another part of the name space)/SOA(Start Of zone of Authority)
+    * Class - IN for Internet
+    * Time to Life (TTL) - how many second info can be stored in a local cache (how long the response record is valid)
+    * Data Format (RDATA) - depends on the type
+
 ### Message Formats
+
+1. Protocol header + questions + answers (RRs) + pointers to authorities + additional info.
+
+2. Simple DNS queries usually use UDP - low overhead, which is important for resolvers that may need to contact many DNS servers.
+
+3. For large data transfers, DNS may utilize TCP.
 
 ### Security and Dynamic Updates
 
