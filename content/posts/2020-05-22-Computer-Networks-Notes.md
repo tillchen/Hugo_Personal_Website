@@ -33,6 +33,10 @@ tags = ["Computer Science"]
   * [Distance Vector Routing (RIP)](#distance-vector-routing-rip)
   * [Link State Routing (OSPF)](#link-state-routing-ospf)
   * [Path Vector Policy Routing (BGP)](#path-vector-policy-routing-bgp)
+* [Internet Transport Layer (UDP, TCP)](#internet-transport-layer-udp-tcp)
+  * [Transport Layer Overview](#transport-layer-overview)
+  * [UDP](#udp)
+  * [TCP](#tcp)
 * [References](#references)
 
 ## Introduction
@@ -317,6 +321,24 @@ The Internet network layer provides a packet-oriented connection-less data excha
     * Transit - peering relationships with more than one other ASs. It's designed to carry both local and transit traffic.
 
 3. BGP doesn't suffer from count-to-infinity. The AS path info allows to detect loops.
+
+## Internet Transport Layer (UDP, TCP)
+
+### Transport Layer Overview
+
+1. The transport layer provides communication services for apps running on hosts.
+
+2. Network layer addresses identify interfaces on nodes (node-to-node significance); Transport layer addresses identify communicating app processes (end-to-end significance).
+
+3. UDP provides a simple unreliable best-effort datagram service.
+
+4. TCP provides a bidirectional, connection-oriented and reliable data stream.
+
+5. Stream Control Transmission Protocol (SCTP) and Datagram Congestion Control Protocol (DCCP).
+
+### UDP
+
+### TCP
 
 ## References
 
