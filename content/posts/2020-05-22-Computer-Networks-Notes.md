@@ -191,6 +191,10 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Ethernet
 
+1. Classic Ethernet usd CSMA/CD and shared bus.
+
+2. Today's Ethernet uses a star topology with full duplex links.
+
 ### Bridges
 
 ### Virtual LAN
