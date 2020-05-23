@@ -29,6 +29,10 @@ tags = ["Computer Science"]
   * [Concepts and Terminology](#concepts-and-terminology)
   * [IPv6](#ipv6)
   * [IPv4](#ipv4)
+* [Internet Routing](#internet-routing)
+  * [Distance Vector Routing (RIP)](#distance-vector-routing-rip)
+  * [Link State Routing (OSPF)](#link-state-routing-ospf)
+  * [Path Vector Policy Routing (BGP)](#path-vector-policy-routing-bgp)
 * [References](#references)
 
 ## Introduction
@@ -274,6 +278,20 @@ The Internet network layer provides a packet-oriented connection-less data excha
 2. IPv4 fragmentation - IPv4 packets that do not fit the link MTU will get fragmented into smaller packets. It is considered harmful.
 
 3. Dynamic Host Configuration Protocol (DHCP) allows nodes to retrieve configuration parameters from a central configuration server.
+
+## Internet Routing
+
+### Distance Vector Routing (RIP)
+
+1. Routing Information Protocol (RIP) is a simple distance vector routing protocol that uses Bellman-Ford.
+
+### Link State Routing (OSPF)
+
+1. Open Shortest Path First (OSPF) is a link state routing protocol that uses Dijstra.
+
+### Path Vector Policy Routing (BGP)
+
+1. Border Gateway Protocol (BGP) is a path vector policy routing protocol that propagates reachability info between ASs.
 
 ## References
 
