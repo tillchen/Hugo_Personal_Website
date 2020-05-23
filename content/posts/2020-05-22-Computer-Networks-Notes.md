@@ -100,6 +100,26 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Media Access Control
 
+1. Media access control - shared transmission media require coordinated access to the medium.
+
+2. Frequency division multiplexing (FDM): simultaneous signals in different frequency bands.
+
+3. Wavelength division multiplexing (WDM): different wavelengths at the same time.
+
+4. Time division multiplexing (TDM): signals are assigned to specific time slots.
+
+5. Pure aloha - sends data as soon as data becomes available (not very efficient)
+
+6. Slotted aloha - sends do not send immediately but wait for the beginning of a time slot - (slightly more efficient)
+
+7. Carrier sense multiple access (CSMA) - sense the media whether it's unused before starting a transmission.
+
+8. CSMA with collision detection (CSMA-CD) - terminates the transmission as soon as a collision has been detected (and retries after some random delay).
+
+9. Multiple access with collision avoidance (MACA) - sends RTS (ready to send) and CTS (clear to send)
+
+10. Token passing - a token is a special bit pattern circulating between stations (only the station holding the token is allowed to send data).
+
 ### Transmission Error Detection
 
 ### Sequence Numbers, Acknowledgements, Timer
