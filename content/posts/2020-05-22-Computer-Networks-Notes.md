@@ -25,6 +25,10 @@ tags = ["Computer Science"]
   * [Virtual LAN](#virtual-lan)
   * [Port Access Control](#port-access-control)
   * [Wireless LAN](#wireless-lan)
+* [Internet Network Layer](#internet-network-layer)
+  * [Concepts and Terminology](#concepts-and-terminology)
+  * [IPv6](#ipv6)
+  * [IPv4](#ipv4)
 * [References](#references)
 
 ## Introduction
@@ -233,6 +237,35 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
     * ACK
 
 3. Management frames - maintenance of the network
+
+## Internet Network Layer
+
+The Internet network layer provides a packet-oriented connection-less data exchange function.
+
+### Concepts and Terminology
+
+1. Terminology:
+    * Node - a device which implements an Internet Protocol.
+    * Router - a node that forwards IP packets not addressed to itself.
+    * Host - any node that's not a router.
+    * Link - a communication channel.
+    * Neighbors - the set of all nodes attached to the same link.
+    * Interface - a node's attachment to a link.
+    * IP address - identifies an interface or set of interfaces.
+    * IP prefix - the initial part of an IP address identifying an IP network.
+    * IP packet - a bit sequence of an IP header and the payload.
+    * Link MTU - maximum transmission unit (max packet size) on a link.
+    * Path MTU - min link MTU of all the links in a path.
+
+2. Calculate the available addresses:
+    * IPv4 - $2^{32-prefix} - 2$
+    * IPv6 - $2^{128-prefix} - 2$
+
+3. we use longest prefix match for IP forwarding in a forwarding table.
+
+### IPv6
+
+### IPv4
 
 ## References
 
