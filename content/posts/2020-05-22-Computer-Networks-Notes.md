@@ -56,6 +56,15 @@ tags = ["Computer Science"]
   * [Multipurpose Internet Mail Extensions (MIME)](#multipurpose-internet-mail-extensions-mime)
   * [Internet Message Access Protocol (IMAP)](#internet-message-access-protocol-imap)
   * [Filtering of Messages (SIEVE)](#filtering-of-messages-sieve)
+* [HyperText Transfer Protocol (HTTP)](#hypertext-transfer-protocol-http)
+  * [URLs, URNs, URIs, IRIs](#urls-urns-uris-iris)
+  * [HTTP 1.1 Methods](#http-11-methods)
+  * [HTTP 1.1 Features](#http-11-features)
+  * [HTTP 2.0](#http-20)
+* [Multimedia over the Internet](#multimedia-over-the-internet)
+  * [Voice over IP](#voice-over-ip)
+  * [Real-Time Transport Protocol (RTP)](#real-time-transport-protocol-rtp)
+  * [Session Initiation Protocol (SIP)](#session-initiation-protocol-sip)
 * [References](#references)
 
 ## Introduction
@@ -539,6 +548,24 @@ The Internet network layer provides a packet-oriented connection-less data excha
 ### Filtering of Messages (SIEVE)
 
 1. SIEVE can either be implemented on the client or the server.
+
+## HyperText Transfer Protocol (HTTP)
+
+### URLs, URNs, URIs, IRIs
+
+### HTTP 1.1 Methods
+
+### HTTP 1.1 Features
+
+### HTTP 2.0
+
+## Multimedia over the Internet
+
+### Voice over IP
+
+### Real-Time Transport Protocol (RTP)
+
+### Session Initiation Protocol (SIP)
 
 ## References
 
