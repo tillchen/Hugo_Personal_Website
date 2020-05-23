@@ -47,6 +47,11 @@ tags = ["Computer Science"]
   * [Message Formats](#message-formats)
   * [Security and Dynamic Updates](#security-and-dynamic-updates)
   * [Creative Usage](#creative-usage)
+* [Augmented Backus Naur Form (ABNF)](#augmented-backus-naur-form-abnf)
+  * [Basics, Rule Names, Terminal Symbols](#basics-rule-names-terminal-symbols)
+  * [Operators](#operators)
+  * [Core Definitions](#core-definitions)
+  * [ABNF in ABNF](#abnf-in-abnf)
 * [References](#references)
 
 ## Introduction
@@ -460,7 +465,23 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### Security and Dynamic Updates
 
+1. Resource Record Signature (RRSIG) RR stores digital signatures.
+
 ### Creative Usage
+
+1. DNS Blacklists (email spam with A and TXT)
+
+## Augmented Backus Naur Form (ABNF)
+
+### Basics, Rule Names, Terminal Symbols
+
+1. A text-based encoding of protocol messages are programmer readable byt less efficient.
+
+### Operators
+
+### Core Definitions
+
+### ABNF in ABNF
 
 ## References
 
