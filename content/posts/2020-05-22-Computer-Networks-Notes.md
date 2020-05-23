@@ -567,6 +567,28 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### HTTP 1.1 Methods
 
+1. Methods:
+    * GET - retrieve a resource
+    * HEAD - retrieve meta-info
+    * POST - annotate an existing resource by passing info to it
+    * PUT - store info (may create a new resource)
+    * DELETE - delete the resource
+    * OPTIONS - request info about methods supported
+    * TRACE - loopback for testing
+    * CONNECT - init a TLS/SSL tunnel
+
+2. Safe methods
+    * Safe methods are intended only for information retrieval and should not change the state of the server.
+    * They should have no side effects beyond logging
+    * GET, HEAD, OPTIONS, TRACE
+
+3. Idempotent methods
+    * Idempotent methods can be executed multiple times without producing results that are different from a single execution.
+    * PUT, DELETE
+    * POST, CONNECT are not idempotent.
+
+4. Supporting caches well is a fundamental goal of HTTP.
+
 ### HTTP 1.1 Features
 
 ### HTTP 2.0
