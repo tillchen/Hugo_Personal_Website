@@ -388,6 +388,20 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### Firewalls
 
+1. Firewall is a system that enforces access control policies between networks.
+
+2. Conservative firewalls allow known desired traffic and reject everything else.
+
+3. Optimistic firewalls reject known unwanted traffic and allow the rest.
+
+4. Firewalls typically consist of packet filters, transport gateways, and application level gateways.
+
+5. Firewall architectures:
+    * Screening router: the simplest - with a packet filter.
+    * Bastion host: a multihomed host which doesn't forward IP datagrams. but instead provide suitable gateways. - prevents direction host communication.
+    * Two packet filters which create a demilitarized zone (DMZ) - most common.
+      * Externally visible servers and gateways are in the DMZ.
+
 ### Network Address Translators
 
 ## References
