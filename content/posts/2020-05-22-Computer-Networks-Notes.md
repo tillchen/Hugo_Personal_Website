@@ -151,6 +151,14 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Flow Control and Congestion Control
 
+1. Flow control - allows the sender to send multiple frames before waiting for ACKs.
+
+2. Sliding window flow control - the size of the window and the speed of the sender must match the buffer capacity of the receiver.
+    * For the send: LFS - LAR + 1 <= SWS (last frame sent, last ACK received, send window size)
+    * For the receiver: LFA - NFE + 1 <= RWS (last frame acceptable, next frame expected, receive window size)
+
+3. Congestions control is used to adapt the speed of the sender to the speed of the network.
+
 ### Layering and the OSI Reference Model
 
 ## References
