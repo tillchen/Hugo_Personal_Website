@@ -311,6 +311,13 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 1. Border Gateway Protocol (BGP) is a path vector policy routing protocol that propagates reachability info between ASs.
 
+2. AS categories:
+    * Stub - only one peering relationship with one other AS. It only carries local traffic.
+    * Multihomed - peering relationships with more than one other ASs. It refuses to carry transit traffic.
+    * Transit - peering relationships with more than one other ASs. It's designed to carry both local and transit traffic.
+
+3. BGP doesn't suffer from count-to-infinity. The AS path info allows to detect loops.
+
 ## References
 
 * <https://cnds.jacobs-university.de/courses/cn-2019/>
