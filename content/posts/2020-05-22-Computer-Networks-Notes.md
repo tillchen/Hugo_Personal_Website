@@ -265,7 +265,15 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### IPv6
 
+1. Error handling - ICMPv6 (Internet Control Message Protocol Version 6).
+
 ### IPv4
+
+1. Error handling - ICMPv4.
+
+2. IPv4 fragmentation - IPv4 packets that do not fit the link MTU will get fragmented into smaller packets. It is considered harmful.
+
+3. Dynamic Host Configuration Protocol (DHCP) allows nodes to retrieve configuration parameters from a central configuration server.
 
 ## References
 
