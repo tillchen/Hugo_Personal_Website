@@ -338,7 +338,35 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### UDP
 
+1. UDP datagrams can be multicasted to a group of receivers.
+
 ### TCP
+
+1. Header fields:
+    * Sequence Number: the sequence number of the first data byte in the segment.
+    * ACK: the next sequence number which the sender of the ACK expects.
+    * Window: the number of data bytes the sender is willing to receive (the window starts with the ACK).
+
+2. Flags:
+    * ACK - indicates the ACK number filed is significant
+    * SYN - synchronization of sequence numbers
+    * FIN - no more data from sender
+
+3. Connection establishment:
+    * Handshake protocol establishes the connection
+    * Guarantees correct connection. even if packets are lost or duplicated.
+
+4. Connection Tear-down - bidirectional
+
+5. Flow control - both TCP engines advertise the buffer sizes during connection establishment.
+
+6. TCP congestion control:
+    * Fundamentally important to avoid a collapse of the Internet.
+    * Congestion window (cwnd) defines how much data can be in transit.
+      * It's maintained by a TCP sender in addition to the flow control receiver window (rwnd).
+    * The sender uses the two windows to limit the flightsize (the data sent but not yet received) to the minimum of the windows.
+
+7. Retransmission timer controls when a segment is resent if no ACK has been received.
 
 ## References
 
