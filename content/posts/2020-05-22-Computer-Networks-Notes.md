@@ -18,6 +18,14 @@ tags = ["Computer Science"]
   * [Sequence Numbers, Acknowledgements, Timer](#sequence-numbers-acknowledgements-timer)
   * [Flow Control and Congestion Control](#flow-control-and-congestion-control)
   * [Layering and the OSI Reference Model](#layering-and-the-osi-reference-model)
+* [Local Area Networks](#local-area-networks)
+  * [Local Area Networks Overview](#local-area-networks-overview)
+  * [Ethernet](#ethernet)
+  * [Bridges](#bridges)
+  * [Virtual LAN](#virtual-lan)
+  * [Port Access Control](#port-access-control)
+  * [Wireless LAN](#wireless-lan)
+  * [Logical Link Control](#logical-link-control)
 * [References](#references)
 
 ## Introduction
@@ -171,6 +179,27 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
     * Network - determination of paths
     * Data link - transmission of bit sequences in so called frames
     * Physical - transmission of an unstructured bit stream
+
+## Local Area Networks
+
+### Local Area Networks Overview
+
+1. IEEE 802 addresses (MAC addresses) are 6 octets (48 bits) long.
+    * It's usually separated using colons or hyphens (00:D0:59:5C:03:8A)
+    * The highest bit indicates whether it's unicast (0) or multicast (1)
+    * The broadcast address is FF-FF-FF-FF-FF
+
+### Ethernet
+
+### Bridges
+
+### Virtual LAN
+
+### Port Access Control
+
+### Wireless LAN
+
+### Logical Link Control
 
 ## References
 
