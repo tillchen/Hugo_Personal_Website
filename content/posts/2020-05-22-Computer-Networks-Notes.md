@@ -591,7 +591,25 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### HTTP 1.1 Features
 
+1. Persistent connections and pipelining. (Make multiple requests without waiting for each response.)
+
+2. Chunked transfer encoding.
+
+3. Caching and proxies - most interesting and complex part of HTTP.
+
+4. Negotiation
+
+5. Conditional requests
+
+6. Entity tags (ETag) is an opaque identifier assigned by a web server to a specific version of resource found at a URL.
+
 ### HTTP 2.0
+
+1. HTTP/1.0 - separate TCP connection for every resource request
+
+2. HTTP/1.1 - persistent connections and pipelining & conditional requests
+
+3. HTTP/2 - header compression & multiplexing & server push into client caches
 
 ## Multimedia over the Internet
 
