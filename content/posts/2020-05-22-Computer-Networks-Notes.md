@@ -214,6 +214,8 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Virtual LAN
 
+1. VLANs provide a separation of logical LAN topologies from physical LAN topologies, which separates the traffic and reduces the network load.
+
 ### Port Access Control
 
 ### Wireless LAN
