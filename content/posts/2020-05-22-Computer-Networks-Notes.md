@@ -50,6 +50,12 @@ tags = ["Computer Science"]
 * [Augmented Backus Naur Form (ABNF)](#augmented-backus-naur-form-abnf)
   * [Basics, Rule Names, Terminal Symbols](#basics-rule-names-terminal-symbols)
   * [Operators](#operators)
+* [Electronic Mail (SMTP, IMAP)](#electronic-mail-smtp-imap)
+  * [Components and Terminology](#components-and-terminology)
+  * [Simple Mail Transfer Protocol (SMTP)](#simple-mail-transfer-protocol-smtp)
+  * [Multipurpose Internet Mail Extensions (MIME)](#multipurpose-internet-mail-extensions-mime)
+  * [Internet Message Access Protocol (IMAP)](#internet-message-access-protocol-imap)
+  * [Filtering of Messages (SIEVE)](#filtering-of-messages-sieve)
 * [References](#references)
 
 ## Introduction
@@ -499,6 +505,40 @@ The Internet network layer provides a packet-oriented connection-less data excha
 5. Optional: []
     * [ab] = *1(ab)
 
+## Electronic Mail (SMTP, IMAP)
+
+### Components and Terminology
+
+1. Terminology:
+    * Mail User Agent (MUA) - source or target
+    * Mail Transfer Agent (MTA) - server and clients that transport
+    * Mail Delivery Agent (MDA) - delivers to the mailbox
+
+### Simple Mail Transfer Protocol (SMTP)
+
+1. It's running over TCP.
+
+### Multipurpose Internet Mail Extensions (MIME)
+
+1. MIME supports multiple different char sets, different media types, etc.
+
+2. MIME is widely implemented and not only for mail.
+
+3. MIME boundaries: a delimiter consist of two dashes followed by the boundary.
+
+### Internet Message Access Protocol (IMAP)
+
+1. IMAP allows a client to access and manipulate mail messages stored on a server.
+
+2. It's on TCP.
+
+3. It's strongly suggested to use TLS to encrypt.
+
+4. IMAP supports asynchronous, concurrent operations.
+
+### Filtering of Messages (SIEVE)
+
+1. SIEVE can either be implemented on the client or the server.
 
 ## References
 
