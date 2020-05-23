@@ -285,9 +285,27 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 1. Routing Information Protocol (RIP) is a simple distance vector routing protocol that uses Bellman-Ford.
 
+2. Count-to-infinity will cause the costs to reach infinity. (A -- B -- C, A--B breaks, B -> C -> A, C updates the hop count)
+
+3. Split horizon - nodes never announce the reachability. Doesn't solve count-to-infinity.
+
+4. Split horizon with poisoned reverse - nodes announce the unreachablility to neighbors. - Doesn't solve count-to-infinity for all cases since the exchange of distance vectors is not synchronized to a global clock.
+
+5. RIP runs on UDP.
+
 ### Link State Routing (OSPF)
 
 1. Open Shortest Path First (OSPF) is a link state routing protocol that uses Dijstra.
+
+2. It's used for IS-IS (intermediate system to intermediate system).
+
+3. Router classification:
+    * Internal
+    * Area Border
+    * Backbone
+    * AS Boundary
+
+4. Stub areas are areas with a single area boarder router.
 
 ### Path Vector Policy Routing (BGP)
 
