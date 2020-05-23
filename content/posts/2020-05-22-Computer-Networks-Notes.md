@@ -50,8 +50,6 @@ tags = ["Computer Science"]
 * [Augmented Backus Naur Form (ABNF)](#augmented-backus-naur-form-abnf)
   * [Basics, Rule Names, Terminal Symbols](#basics-rule-names-terminal-symbols)
   * [Operators](#operators)
-  * [Core Definitions](#core-definitions)
-  * [ABNF in ABNF](#abnf-in-abnf)
 * [References](#references)
 
 ## Introduction
@@ -477,11 +475,30 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 1. A text-based encoding of protocol messages are programmer readable byt less efficient.
 
+2. ABNF is used to formally specify textual protocol messages. It consists of set of rules (productions)
+
+3. Comments start with ;.
+
+4. The name of a rule must start with an alphabetic character.
+
+5. Terminal symbols are non-negative numbers. We can use . as concatenation and - as a value range operator. They can also be defined by ASCII characters in double quotes.
+
+6. %s - case sensitive; %i - case insensitive (the default).
+
 ### Operators
 
-### Core Definitions
+1. Concatenation: empty word
 
-### ABNF in ABNF
+2. Alternatives: /
+
+3. Grouping: ()
+
+4. Repetitions: n*m (n and m are optional)
+    * n is the min (default 0) and m (default inf) is the max for repetitions
+
+5. Optional: []
+    * [ab] = *1(ab)
+
 
 ## References
 
