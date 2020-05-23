@@ -615,9 +615,17 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### Voice over IP
 
+1. UDP can be used.
+
 ### Real-Time Transport Protocol (RTP)
 
+1. End-to-end real-time data.
+
+2. Commonly used over UDP.
+
 ### Session Initiation Protocol (SIP)
+
+1. Create, modify, and terminate sessions with one or more participants.
 
 ## References
 
