@@ -41,6 +41,12 @@ tags = ["Computer Science"]
   * [Middleboxes](#middleboxes)
   * [Firewalls](#firewalls)
   * [Network Address Translators](#network-address-translators)
+* [Domain Name System (DNS)](#domain-name-system-dns)
+  * [Overview and features](#overview-and-features)
+  * [Resource Records](#resource-records)
+  * [Message Formats](#message-formats)
+  * [Security and Dynamic Updates](#security-and-dynamic-updates)
+  * [Creative Usage](#creative-usage)
 * [References](#references)
 
 ## Introduction
@@ -416,6 +422,32 @@ The Internet network layer provides a packet-oriented connection-less data excha
 5. Port restricted cone NAT also includes the restriction for the port number.
 
 6. Symmetric NAT: only the external host that receives a packet can send a UDP packet back to the internal host.
+
+## Domain Name System (DNS)
+
+### Overview and features
+
+1. DNS provides a global infrastructure to map human friendly domain names into addresses. - name resolution.
+
+2. The resolver is typically tightly integrated into the OS or more precisely the standard libraries.
+
+3. Most hosts do not resolve names themselves but instead the resolver is sending recursive queries to a domain name resolver.
+
+4. Administration of the name space can be delegated.
+
+5. The original DNS protocol doesn't provide sufficient security. There's no reason to trust DNS responses.
+
+6. DNS labels are case-insensitive.
+
+7. The absolute paths ending at the virtual root node end with a trailing dot.
+
+### Resource Records
+
+### Message Formats
+
+### Security and Dynamic Updates
+
+### Creative Usage
 
 ## References
 
