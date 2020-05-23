@@ -161,6 +161,17 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Layering and the OSI Reference Model
 
+1. Protocol data units (PDUs) are exchanged between peer entities; service data units (SDUs) are exchanged between layers (services).
+
+2. The Open systems interconnection model (OSI model): (layer 7 -> layer 1)
+    * Application
+    * Presentation - data compression/integrity services etc.
+    * Session - security services
+    * Transport - communication channels
+    * Network - determination of paths
+    * Data link - transmission of bit sequences in so called frames
+    * Physical - transmission of an unstructured bit stream
+
 ## References
 
 * <https://cnds.jacobs-university.de/courses/cn-2019/>
