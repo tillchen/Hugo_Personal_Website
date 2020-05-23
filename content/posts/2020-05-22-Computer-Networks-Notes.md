@@ -404,6 +404,19 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ### Network Address Translators
 
+1. Basic NAT: translates private IP address to public IP address.
+
+2. Network Address Port Translation (NAPT): translates transport endpoint identifiers. It allows to share a single public address among many private addresses (masquerading).
+
+3. Full cone NAT is a NAT where all requests from the same internal IP address and port are mapped to the same external IP address and port.
+    * Any external host can send a packet to the internal host by sending a packet to the mapped external address.
+
+4. Restrict cone NAT: unlike full cone, an external host (with IP address X) can send a packet to the internal post only if the internal host had previously sent a packet to IP address X.
+
+5. Port restricted cone NAT also includes the restriction for the port number.
+
+6. Symmetric NAT: only the external host that receives a packet can send a UDP packet back to the internal host.
+
 ## References
 
 * <https://cnds.jacobs-university.de/courses/cn-2019/>
