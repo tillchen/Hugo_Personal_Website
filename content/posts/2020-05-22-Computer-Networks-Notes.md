@@ -25,7 +25,6 @@ tags = ["Computer Science"]
   * [Virtual LAN](#virtual-lan)
   * [Port Access Control](#port-access-control)
   * [Wireless LAN](#wireless-lan)
-  * [Logical Link Control](#logical-link-control)
 * [References](#references)
 
 ## Introduction
@@ -218,9 +217,22 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Port Access Control
 
+1. Port-based network access control grants access to a switch port based on the identity of the connected machine.
+
+2. Components:
+    * Supplicant - on a machine
+    * Authenticator - on a bridge
+    * Authentication server
+
 ### Wireless LAN
 
-### Logical Link Control
+1. Data frames - "useful" payloads
+
+2. Control frames - facilitates the exchange of data frames
+    * RTS & CTS
+    * ACK
+
+3. Management frames - maintenance of the network
 
 ## References
 
