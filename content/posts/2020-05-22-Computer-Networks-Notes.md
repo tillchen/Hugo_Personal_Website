@@ -80,6 +80,24 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Communication Channels and Transmission Media
 
+1. Signals are in general modified during transmission, leading to transmission errors.
+
+2. Data rate (bit rate) vs bit time:
+    * Bit time is the time needed to transmit a single bit (1 microsecond for 1 Mbit/s)
+
+3. Delay is the time needed to transmit a message from the source to the sink. It consists of transmission delay and propagation delay.
+
+    ![transmission vs propagation delay](/images/transmission_propagation_delay.png)
+
+4. Bit error rate is the probability of a bit being changed during transmission.
+
+5. Simple wires can easily experience crosstalk caused by capacitive coupling.
+
+6. Transmission impairments:
+    * Attenuation
+    * Delay distortion (different frequencies arrive at different time)
+    * Noise
+
 ### Media Access Control
 
 ### Transmission Error Detection
