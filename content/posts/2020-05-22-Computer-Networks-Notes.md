@@ -129,6 +129,26 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Sequence Numbers, Acknowledgements, Timer
 
+1. Errors:
+    * Bit errors
+    * Loss of complete data frames
+    * Duplication of complete data frames
+    * Receipt of data frames that were never sent
+    * Reordering of data frames during transmission
+
+2. End-to-end flow control - the sender must adapt its speed to the speed of the receiver.
+
+3. Congestion control - the sender must react to congestions.
+
+4. The sender assigns growing sequence numbers to all data frames to deal with the errors above.
+
+5. The receiver sends ACK to handle errors.
+    * ACK: positive acknowledgement
+    * NACK: negative acknowledgement
+    * Stop-and-wait protocol - a frame is only transmitted if the previous frame was acknowledged.
+
+6. A send can also use a timer to retransmit a frame if no ACK has been received in time.
+
 ### Flow Control and Congestion Control
 
 ### Layering and the OSI Reference Model
