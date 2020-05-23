@@ -37,6 +37,10 @@ tags = ["Computer Science"]
   * [Transport Layer Overview](#transport-layer-overview)
   * [UDP](#udp)
   * [TCP](#tcp)
+* [Firewalls and Network Address Translators](#firewalls-and-network-address-translators)
+  * [Middleboxes](#middleboxes)
+  * [Firewalls](#firewalls)
+  * [Network Address Translators](#network-address-translators)
 * [References](#references)
 
 ## Introduction
@@ -367,6 +371,24 @@ The Internet network layer provides a packet-oriented connection-less data excha
     * The sender uses the two windows to limit the flightsize (the data sent but not yet received) to the minimum of the windows.
 
 7. Retransmission timer controls when a segment is resent if no ACK has been received.
+
+## Firewalls and Network Address Translators
+
+### Middleboxes
+
+1. A middlebox ia any intermediary device performing functions other than the normal standard functions of an IP router.
+
+2. It challenges the End-to-End principle.
+
+3. Types of middleboxes:
+    * Network Address Translators (NAT): a function that dynamically assigns a globally unique address to a host.
+    * IP Firewalls
+    * Proxies
+    * ...
+
+### Firewalls
+
+### Network Address Translators
 
 ## References
 
