@@ -197,6 +197,21 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Bridges
 
+1. Source routing bridges - sender routes the frame through the bridged network.
+
+2. Transparent bridges - bridges are transparent to senders and receivers.
+    * Look up an entry in the forwarding DB (entry added when a frame is received) and forward the frame to the port.
+    * If not matching entry exists, do flooding - forward the frame to all outgoing ports except the port from which the frame was received.
+
+3. Port states:
+    * Blocking
+    * Listening
+    * Learning
+    * Forwarding
+    * Disabled
+
+4. A bridged LAN has a single broadcast domain - frames sent to this address will be forwarded on all links.
+
 ### Virtual LAN
 
 ### Port Access Control
