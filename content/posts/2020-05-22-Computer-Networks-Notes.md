@@ -122,6 +122,11 @@ This is the course notes for Computer Networks at Jacobs University Bremen.
 
 ### Transmission Error Detection
 
+1. Simple parity bits can be added to code words to detect bit errors.
+
+2. Cyclic redundancy check (CRC) uses polynomials (1101 = $x^3+x^2+1$)
+    * Divide the message with the generator, if the remainder is 0, we assume no transmission error. Otherwise, add the remainder to the message to get the real bit sequence.
+
 ### Sequence Numbers, Acknowledgements, Timer
 
 ### Flow Control and Congestion Control
