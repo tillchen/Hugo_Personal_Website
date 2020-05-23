@@ -551,7 +551,19 @@ The Internet network layer provides a packet-oriented connection-less data excha
 
 ## HyperText Transfer Protocol (HTTP)
 
+1. HTTP runs on TCP.
+
 ### URLs, URNs, URIs, IRIs
+
+1. URI - Uniform Resource Identifier
+
+2. URL - Uniform Resource Locator
+    * A subset of URIs
+
+3. URN - Uniform Resource Name
+    * A subset of URIs wih globally unique and persistent name.
+
+4. IRI - Internationalized Resource Identifier
 
 ### HTTP 1.1 Methods
 
