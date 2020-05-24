@@ -22,6 +22,8 @@ tags = ["Computer Science"]
 * [Complexity Theory](#complexity-theory)
   * [Time Complexity](#time-complexity)
     * [Measuring Complexity](#measuring-complexity)
+    * [The Class P](#the-class-p)
+    * [The Class NP](#the-class-np)
   * [Space Complexity](#space-complexity)
 * [References](#references)
 
@@ -218,6 +220,19 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 3. Polynomial bound and exponential bound:
     * Polynomial bound - $f(n) = O(n^p)$
     * Exponential bound - $f(n) = 2^{(O(n^\delta))}$
+
+4. The time complexity class TIME(t(n)) is the set of all languages that are decidable by an O(t(n)) time single-tape DTM.
+
+5. For every t(n) time deterministic multi-tape TM there exists an equivalent $O(t^2(n))$ time deterministic single-tape TM.
+    * This only gives existence. But there can be better implementations.
+
+6. The running time of nondeterministic decider N is the maximum number of steps f(n) uses on any branch.
+
+7. For every t(n) NTM there exists an equivalent $2^{O(t(n))}$ time DTM. (By BFS.)
+
+#### The Class P
+
+#### The Class NP
 
 ### Space Complexity
 
