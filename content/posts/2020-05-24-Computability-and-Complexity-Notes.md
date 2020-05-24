@@ -294,6 +294,18 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### Hierarchy Theorems
 
+1. Time constructible: f(n) at least $O(n \log n)$. f is time constructible if a computable function exists that maps the string $1^n$ (the unary representation) to the binary representation of f(n) in time $O(f(n))$. (output could also be unary.) (normal functions are all time constructible)
+
+2. Let f be a time-constructible function. There exists a language A that's decidable in $O(f(n))$ but not decidable in time $o(f(n)/\log f(n))$. (By increasing the time complexity by more than a logarithm of it, we increase the size of the time complexity class.)
+
+3. Let $f_1 \ f_2$ be time-constructible and $f_1(n) = o(f_2(n)/\log f_2(n))$, then $TIME(f_1(n)) \subsetneq TIME(f_2(n))$
+
+4. For $1 \leq \epsilon_1 < \epsilon_2$ and $n^{\epsilon_1}$ at least in $O(n\log n)$, it holds $TIME(f_1(n)) \subsetneq TIME(f_2(n))$
+
+5. $EXPTIME = \bigcup_{k \in \mathbb{N}_0} TIME(2^{n^k})$.
+
+6. $P \subsetneq EXPTIME$. (Even if P=NP, there are problems of exponential runtime.)
+
 ### Space Complexity
 
 ## References
