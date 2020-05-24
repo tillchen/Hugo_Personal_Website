@@ -38,6 +38,8 @@ tags = ["Programming Languages"]
 12. `zip -r foo.zip foo` zips the file/directory. `unzip foo.zip` unzips.
 
 13. `grep regex foo.txt` searches in foo.txt .
+    * -i for case-insensitive
+    * -v for inversion 
 
 14. `find . -name "foo*"` finds the files with the name foo* .
 
