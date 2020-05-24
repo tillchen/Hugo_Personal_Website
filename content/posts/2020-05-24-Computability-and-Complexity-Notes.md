@@ -17,6 +17,7 @@ tags = ["Computer Science"]
   * [Decidability](#decidability)
     * [Decidable Languages](#decidable-languages)
     * [Undecidability of $A_{TM}$](#undecidability-of-math-xmlns%22httpwwww3org1998mathmathml%22semanticsmrowmsubmiamimrowmitmimimmimrowmsubmrowannotation-encoding%22applicationx-tex%22atmannotationsemanticsmathatm%e2%80%8b)
+    * [A Turing-Unrecognizable Language](#a-turing-unrecognizable-language)
   * [Reducibility](#reducibility)
 * [Complexity Theory](#complexity-theory)
   * [Time Complexity](#time-complexity)
@@ -170,6 +171,14 @@ The hypothesis that both are equal is called Church-Turing Thesis.
     * The set $\mathcal{B}$ of all infinite binary sequences is uncountable. (Proof by diagnolization.)
     * Fixing a non-empty alphabet $\Sigma$, the set of all languages over $\Sigma$ is uncountable. (Construct a bijection between the set of all languages of $\Sigma$ and $\mathcal{B}$ to have the characteristic string. The latter is uncountable, the former is also uncountable.)
     * The set of TMs is countable but the set of languages is uncountable. So there are languages not described by TMs.
+
+#### A Turing-Unrecognizable Language
+
+1. L is co-Turing-recognizable if $\bar L$ is Turing-recognizable.
+
+2. A language is decidable iff it's Turing-recognizable and co-Turing-recognizable. (Run two TMs in parallel.)
+
+3. The language $\bar{A_{TM}}$ is not Turing recognizable. (L is undecidable $\Rightarrow$ L not Turing recognizable $\vee$ $\bar L$ not Turing recognizable $\Rightarrow$ $\bar L$ not Turing recognizable)
 
 ### Reducibility
 
