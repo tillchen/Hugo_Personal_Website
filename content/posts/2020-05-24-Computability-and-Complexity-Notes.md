@@ -283,7 +283,14 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 4. F is satisfiable if F has at least one model.
 
-5. Cook-Levin: $SAT =\\{\langle F \rangle| \text{F is a satisfiable Boolean formula}\\}$ is NP-complete.
+5. Cook-Levin: $SAT =\\{\langle F \rangle| \text{F is a satisfiable Boolean formula}\\}$ is NP-complete. The proof:
+    * $F = F_{cell} \wedge F_{start} \wedge F_{move} \wedge F_{accept}$
+
+6. $3SAT =\\{\langle F \rangle| \text{F is in 3CNF and is satisfiable} \\}$ is NP-complete.
+
+7. For all boolean formulas F in CNF there exists a boolean formula $F'$ in 3CNF such that F is satisfiable iff $F'$ is satisfiable. $F'$ can be built from F in polynomial time.
+
+8. CLIQUE is NP-complete. (Proof $3SAT \leq_P CLIQUE$)
 
 #### Hierarchy Theorems
 
