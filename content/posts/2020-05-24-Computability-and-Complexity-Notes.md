@@ -182,6 +182,20 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 ### Reducibility
 
+1. The language $HALT_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M halts on input} w \\}$ is undecidable. (Proof by contradiction. Assume there's a decider R for $HALT_{TM}$. Construct a decider for $A_{TM}$ ("R rejects, reject" eliminates the loop case.))
+
+2. A Computable function f $\Rightarrow$ there exists some TM M, on every input w, halts with just f(w) on its tape.
+
+3. A is mapping reducible to B ($A \leq_{m} B$) if there's a computable function f between them. f is called a reduction from A to B.
+
+4. If $A \leq_{m} B$ and B is decidable, A is decidable.
+
+5. If $A \leq_{m} B$ and A is undecidable, B is undecidable.
+
+6. We can also prove $HALT_{TM}$ to be undecidable by finding a reduction from $A_{TM}$. ($w \in A_{TM} \Leftrightarrow f(w) \in HALT_{TM}$)
+
+7. The language $REGULAR_{TM}=\\{\langle M \rangle| \text{M is a TM and L(M) is a regular language} \\}$ is undecidable.
+
 ## Complexity Theory
 
 ### Time Complexity
