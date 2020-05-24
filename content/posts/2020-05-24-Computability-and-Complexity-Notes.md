@@ -273,6 +273,18 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### NP-completeness
 
+1. A language B is NP-complete if:
+   1. $B \in NP$ and
+   2. $A \leq_P B$ for all $A \in NP$
+
+2. If B is NP-complete and $B \in P$, then $P = NP$.
+
+3. If B is NP-complete and $B \leq_P C$ for a $C \in NP$, then C is also NP-complete.
+
+4. F is satisfiable if F has at least one model.
+
+5. Cook-Levin: $SAT =\\{\langle F \rangle| \text{F is a satisfiable Boolean formula}\\}$ is NP-complete.
+
 #### Hierarchy Theorems
 
 ### Space Complexity
