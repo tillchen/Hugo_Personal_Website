@@ -232,6 +232,14 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### The Class P
 
+1. $P = \bigcup_{k \in \mathbb{N}_0} TIME(n^k)$
+
+2. The PATH problem/language is The language $PATH=\\{\langle G,s,t \rangle| \text{G is a directed graph that has a path from s to t} \\}$ is undecidable. $PATH \in P$ (BFS)
+
+3. $RELPRIME =\\{\langle x,y \rangle| \text{x and y are relatively prime} \\}$. $RELPRIME \in P$ (Euclidean algorithm to find the gcd (log depth, unary -> O(n)).)
+
+4. Every context-free language is in P. (DP.)
+
 #### The Class NP
 
 ### Space Complexity
