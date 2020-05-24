@@ -16,6 +16,7 @@ tags = ["Computer Science"]
       * [Random Access Machine](#random-access-machine)
   * [Decidability](#decidability)
     * [Decidable Languages](#decidable-languages)
+    * [Undecidability of $A_{TM}$](#undecidability-of-math-xmlns%22httpwwww3org1998mathmathml%22semanticsmrowmsubmiamimrowmitmimimmimrowmsubmrowannotation-encoding%22applicationx-tex%22atmannotationsemanticsmathatm%e2%80%8b)
   * [Reducibility](#reducibility)
 * [Complexity Theory](#complexity-theory)
   * [Time Complexity](#time-complexity)
@@ -140,17 +141,23 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 3. The language $A_{REX}=\\{\langle B,w \rangle| \text{B is a regular expression that generates string } w \\}$ is decidable. (Convert R to DFA.)
 
-4. The language $E_{DFA}=\\{\langle A \rangle| \text{A is a DFA and L(A) = } \empty \\}$ is decidable. (No accept states are marked.)
+4. The language $E_{DFA}=\\{\langle A \rangle| \text{A is a DFA and L(A) = } \emptyset \\}$ is decidable. (No accept states are marked.)
 
 5. The language $EQ_{DFA}=\\{\langle A,B \rangle| \text{A and B are DFAs and L(A)=L(B) } \\}$ is decidable. (Build C that's empty iff A=B. Use $E_{DFA}$ on C.)
 
 6. The language $A_{CFG}=\\{\langle G,w \rangle| \text{A is a CFG that generates string } w \\}$ is decidable. (Convert G to CFG in Chomsky Normal Form; enumerate all derivations within 2n-1 steps.)
 
-7. The language $E_{CFG}=\\{\langle A \rangle| \text{A is a CFG and L(G) = } \empty \\}$ is decidable. (Mark all terminal symbols. Follow the rules until no new variables are marked. If the start symbol is not marked, accept.)
+7. The language $E_{CFG}=\\{\langle A \rangle| \text{A is a CFG and L(G) = } \emptyset \\}$ is decidable. (Mark all terminal symbols. Follow the rules until no new variables are marked. If the start symbol is not marked, accept.)
 
 8. But $EQ_{CFG}$ is not decidable.
 
 9. Every context-free language L is decidable. (Build a TM with CFG G with $A_{CFG}$)
+
+#### Undecidability of $A_{TM}$
+
+1. The language $A_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M accepts } w \\}$ is undecidable. (Proof by diagonalization)
+
+2. The language $A_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M accepts } w \\}$ is Turing-recognizable. (Build TM U. Simulate M on w. If M accepts, U accepts. If M rejects, U rejects.) (U is an instance of Universal TM) (U can run forever.)
 
 ### Reducibility
 
