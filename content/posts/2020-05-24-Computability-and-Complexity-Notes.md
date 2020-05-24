@@ -15,6 +15,7 @@ tags = ["Computer Science"]
       * [Nondeterministic TM](#nondeterministic-tm)
       * [Random Access Machine](#random-access-machine)
   * [Decidability](#decidability)
+    * [Decidable Languages](#decidable-languages)
   * [Reducibility](#reducibility)
 * [Complexity Theory](#complexity-theory)
   * [Time Complexity](#time-complexity)
@@ -130,6 +131,18 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 7. TMs and RAMs have the same expressive power.
 
 ### Decidability
+
+#### Decidable Languages
+
+1. The language $A_{DFA}=\\{\langle B,w \rangle| \text{B is a DFA that accepts input string } w \\}$ is decidable. (The problem of testing whether a given DFA accepts a given string is decidable.)
+
+2. The language $A_{NFA}=\\{\langle B,w \rangle| \text{B is a NFA that accepts input string } w \\}$ is decidable. (Convert to NFA to DFA.)
+
+3. The language $A_{REX}=\\{\langle B,w \rangle| \text{B is a regular expression that generates string } w \\}$ is decidable. (Convert R to DFA.)
+
+4. The language $E_{DFA}=\\{\langle A \rangle| \text{A is a DFA and L(A) = } \empty \\}$ is decidable. (No accept states are marked.)
+
+5. The language $EQ_{DFA}=\\{\langle A,B \rangle| \text{A and B are DFAs and L(A)=L(B) } \\}$ is decidable. (Build C that's empty iff A=B. Use $E_{DFA}$ on C.)
 
 ### Reducibility
 
