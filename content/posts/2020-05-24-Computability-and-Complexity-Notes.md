@@ -144,6 +144,14 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 5. The language $EQ_{DFA}=\\{\langle A,B \rangle| \text{A and B are DFAs and L(A)=L(B) } \\}$ is decidable. (Build C that's empty iff A=B. Use $E_{DFA}$ on C.)
 
+6. The language $A_{CFG}=\\{\langle G,w \rangle| \text{A is a CFG that generates string } w \\}$ is decidable. (Convert G to CFG in Chomsky Normal Form; enumerate all derivations within 2n-1 steps.)
+
+7. The language $E_{CFG}=\\{\langle A \rangle| \text{A is a CFG and L(G) = } \empty \\}$ is decidable. (Mark all terminal symbols. Follow the rules until no new variables are marked. If the start symbol is not marked, accept.)
+
+8. But $EQ_{CFG}$ is not decidable.
+
+9. Every context-free language L is decidable. (Build a TM with CFG G with $A_{CFG}$)
+
 ### Reducibility
 
 ## Complexity Theory
