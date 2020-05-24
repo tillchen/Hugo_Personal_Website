@@ -38,6 +38,18 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
       6. $q_{accept} \in Q$ is the accept state, where $q_{accept} \neq q{reject}$
       7. $q_{reject} \in Q$ is the reject state.
 
+2. Configuration of a TM:
+    * Let M be a TM, $u,v \in \Gamma^*$ and $q \in Q$. The setting $uqv$ is a configuration of the TM, where
+      * $u$ is the current tape content to the left of the head
+      * $q$ is the current state
+      * $v$ is the current tape content **below** ($v_1$) **and to the right** of the head (being terminated by blanks $\sqcup$)
+
+3. A configuration $C_1$ **yields** a configuration $C_2$ if M can legally from $C_1$ to $C_2$ in a single step.
+    * Leftward move: $uaq_i bv$ yields $uq_j acv$ iff $\delta(q_i, b) = (q_j, c, L)$
+    * Rightward move: $uaq_i bv$ yields $uacq_j v$ iff $\delta(q_i, b) = (q_j, c, R)$
+    * L-move, left tape end: $q_i bv$ yields $q_j cv$ iff $\delta(q_i, b) = (q_j, c, L)$
+    * R-move, left tape end: $q_i bv$ yields $cq_j v$ iff $\delta(q_i, b) = (q_j, c, R)$
+
 #### Variants of Turing Machines
 
 ### Decidability
