@@ -25,6 +25,8 @@ tags = ["Computer Science"]
     * [The Class P](#the-class-p)
     * [The Class NP](#the-class-np)
     * [Polynomial Time Reducibility](#polynomial-time-reducibility)
+    * [NP-completeness](#np-completeness)
+    * [Hierarchy Theorems](#hierarchy-theorems)
   * [Space Complexity](#space-complexity)
 * [References](#references)
 
@@ -264,6 +266,14 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 10. $SUBSETSUM \in NP$
 
 #### Polynomial Time Reducibility
+
+1. A is polynomial time (mapping) reducible to B ($A \leq_P B$) if there's a polynomial time computable function such that $w \in A$ iff $f(w) \in B$.
+
+2. If $A \leq_P B$ and $B \in P$, then $A \in P$.
+
+#### NP-completeness
+
+#### Hierarchy Theorems
 
 ### Space Complexity
 
