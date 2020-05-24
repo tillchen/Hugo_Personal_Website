@@ -242,6 +242,20 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### The Class NP
 
+1. The nondeterministic time complexity class NTIME(t(n)) is the set of all languages that are decidable by an O(t(n)) time NTM.
+
+2. $NP = \bigcup_{k \in \mathbb{N}_0} NTIME(n^k)$
+
+3. $P \subset NP$
+
+4. A verifier for a language A is a deterministic decider $V_A$ that takes as input $\langle w,c \rangle$ such that it holds: $w \in A$ iff there exists c such that $\langle w,c \rangle$ is accepted by $V_A$. c is called certificate.
+
+5. $V_A$ is a polynomial time verifier if it has a polynomial running time in the size of its input. A is called polynomially verifiable if there exists a polynomial time verifier for it.
+
+6. An alternative definition for NP: NP is the class of languages for which there exist polynomial time verifiers.
+
+7. There exists a polynomial time verifier for A iff there exists a nondeterministic polynomial time TM that recognizes A.
+
 ### Space Complexity
 
 ## References
