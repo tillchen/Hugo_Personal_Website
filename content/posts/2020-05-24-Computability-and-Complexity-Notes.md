@@ -35,7 +35,7 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
       3. $\Gamma$ is the tape alphabet, where $\sqcup \in \Gamma$ and $\Sigma \subseteq \Gamma$
       4. $\delta :Q\times \Gamma \rightarrow Q\times \Gamma \times \\{L,R\\}$ is the transition function
       5. $q_0 \in Q$ is the start state
-      6. $q_{accept} \in Q$ is the accept state, where $q_{accept} \neq q{reject}$
+      6. $q_{accept} \in Q$ is the accept state, where $q_{accept} \neq q_{reject}$
       7. $q_{reject} \in Q$ is the reject state.
 
 2. Configuration of a TM:
