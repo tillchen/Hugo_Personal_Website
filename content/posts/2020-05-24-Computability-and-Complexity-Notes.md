@@ -21,6 +21,7 @@ tags = ["Computer Science"]
   * [Reducibility](#reducibility)
 * [Complexity Theory](#complexity-theory)
   * [Time Complexity](#time-complexity)
+    * [Measuring Complexity](#measuring-complexity)
   * [Space Complexity](#space-complexity)
 * [References](#references)
 
@@ -205,6 +206,18 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 ## Complexity Theory
 
 ### Time Complexity
+
+#### Measuring Complexity
+
+1. The running time or time complexity of M is the function f(n)'s maximum number of steps that M uses on any input of length n. (Worst case.)
+
+2. Big O and small o:
+    * Big O - there exists a number c and $n_0$
+    * Small o - for any c > 0 there exists $n_0$
+
+3. Polynomial bound and exponential bound:
+    * Polynomial bound - $f(n) = O(n^p)$
+    * Exponential bound - $f(n) = 2^{(O(n^\delta))}$
 
 ### Space Complexity
 
