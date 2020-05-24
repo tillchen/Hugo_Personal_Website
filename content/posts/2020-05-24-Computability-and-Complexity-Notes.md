@@ -92,6 +92,18 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
 
 ##### Nondeterministic TM
 
+1. The definition differs from the standard TM that: $\delta :Q\times \Gamma \rightarrow \mathcal{P}(Q\times \Gamma \times \\{L,R\\})$
+
+2. For definition of yielding configurations, it differs from the standard TM that we need to change from $=$ to $\in$. (One config can yield several or no config.)
+
+3. Exactly the same definition for accepted input and recognized language.
+
+4. For every NTM N, there exists a deterministic (single-tape) TM S that recognizes the same language.
+
+5. Turing-recognizable iff some NTM recognizes it.
+
+6. Nondeterministic decider: if all branches halt on all inputs.
+
 ##### Random Access Machine
 
 ### Decidability
