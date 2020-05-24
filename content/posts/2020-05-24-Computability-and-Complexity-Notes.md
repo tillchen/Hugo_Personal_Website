@@ -29,6 +29,13 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
 
 ### The Church-Turing Thesis
 
+There exists
+
+1. an intuitive idea of an algorithm and
+2. a formalization via DTM/NTM/RAM
+
+The hypothesis that both are equal is called Church-Turing Thesis.
+
 #### Turing Machines
 
 1. Formal definition of a TM:
@@ -105,6 +112,22 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
 6. Nondeterministic decider: if all branches halt on all inputs.
 
 ##### Random Access Machine
+
+1. k - command counter; a - accumulator; c - register; x - input; $h_r$ - position on input; y - output.
+
+2. Some commands:
+    * read: $a = x_{h_r}; \ h_r = h_r + 1; k = k + 1$
+    * print a: $y=ay; k = k + 1$
+
+3. Input tape: read-only and read once, can only move to the right
+
+4. Program: finite sequence of commands.
+
+5. There exists a RAM that terminates and outputs 1 whenever a TM M accepts. The RAM terminates and outputs 0 whenever M rejects.
+
+6. Let R be an RAM. For an arbitrary input x it outputs y(x). There exists a multi-tape TM that accepts the input x after writing y(x) on one of its tapes.
+
+7. TMs and RAMs have the same expressive power.
 
 ### Decidability
 
