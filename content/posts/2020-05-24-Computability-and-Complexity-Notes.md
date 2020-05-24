@@ -196,6 +196,12 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 7. The language $REGULAR_{TM}=\\{\langle M \rangle| \text{M is a TM and L(M) is a regular language} \\}$ is undecidable.
 
+8. If $A \leq_{m} B$ and B is Turing-recognizable, A is Turing-recognizable.
+
+9. If $A \leq_{m} B$ and A is not Turing-recognizable, B is not Turing-recognizable.
+
+10. The language $EQ_{TM}=\\{\langle M_1, M_2 \rangle| M_1 \ M_2 \text{ are TMs and } L(M_1) = L(M_2) \\}$ is not Turing-recognizable. (Proof by $A_{TM} \leq_{m} \overline{EQ_{TM}}$ ($M_1$ rejects everything and $M_2$ accepts if M accepts w.))
+
 ## Complexity Theory
 
 ### Time Complexity
