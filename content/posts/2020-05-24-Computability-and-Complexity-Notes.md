@@ -50,6 +50,31 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
     * L-move, left tape end: $q_i bv$ yields $q_j cv$ iff $\delta(q_i, b) = (q_j, c, L)$
     * R-move, left tape end: $q_i bv$ yields $cq_j v$ iff $\delta(q_i, b) = (q_j, c, R)$
 
+4. Characterization of configuration:
+    * Start configuration: $u = \epsilon$, i.e. head is at leftmost end of tape
+    * Accepting configuration: $q=q_{accept}$
+    * Rejecting configuration: $q=q_{reject}$
+    * Halting configuration: accepting or rejecting configuration
+    * Remark: there's exactly one accepting/rejecting state, but there can be many accepting/rejecting configurations.
+
+5. Accepted input and recognized language:
+    * M accepts $w$ if a sequence of configurations $C_1 , C_2 , ..., C_k$ exists, such that
+      1. $C_1$ is the start configuration
+      2. $C_i$ yields $C_{i+1}$
+      3. $C_k$ is the accepting configuration
+    * The language of M is $L(M) = \\{w \in \Sigma^* | M \ \text{accepts} \ w\\}$. We say L is recognized by M.
+
+6. Turing-recognizable or recursively enumerable language, if some TM recognizes it.
+
+7. M halts on $w$ if a sequence of configurations $C_1 , C_2 , ..., C_k$ exists, such that
+    1. $C_1$ is the start configuration
+    2. $C_i$ yields $C_{i+1}$
+    3. $C_k$ is the halting configuration
+
+8. Decider: if it halts on all inputs $w \in \Sigma^*$. A decider M that recognizes L is said to decide L.
+
+9. Decidable/Recursive/Turing-decidable language: if there exists a TM (i.e. a decider) that decides it.
+
 #### Variants of Turing Machines
 
 ### Decidability
