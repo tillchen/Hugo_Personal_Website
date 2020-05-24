@@ -155,9 +155,21 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### Undecidability of $A_{TM}$
 
-1. The language $A_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M accepts } w \\}$ is undecidable. (Proof by diagonalization)
+1. The language $A_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M accepts } w \\}$ is undecidable. (Proof by diagonalization. A TM D($\langle M\rangle$) that accept if M doesn't accept $\langle M\rangle$, which leads to contradiction.)
 
 2. The language $A_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M accepts } w \\}$ is Turing-recognizable. (Build TM U. Simulate M on w. If M accepts, U accepts. If M rejects, U rejects.) (U is an instance of Universal TM) (U can run forever.)
+
+3. Sets:
+    * A and B have the same size/cardinality if there exists a bijective function f with $f: A \rightarrow B$.
+    * A is countable if it's either finite or has the same size as $\mathbb{N}$. Otherwise it's uncountable.
+      * The set $\mathbb{Q}$ of rational numbers is countable.
+      * The set $\mathbb{R}$ of real numbers is uncountable. (Proof by diagnolization.)
+
+4. There exist languages that are not Turing-recognizable.
+    * Fixing a non empty alphabet $\Sigma$, the set of all TMs over $\Sigma$ is countable. (M can be mapped to binary strings, which are countable (enumerate).)
+    * The set $\mathcal{B}$ of all infinite binary sequences is uncountable. (Proof by diagnolization.)
+    * Fixing a non-empty alphabet $\Sigma$, the set of all languages over $\Sigma$ is uncountable. (Construct a bijection between the set of all languages of $\Sigma$ and $\mathcal{B}$ to have the characteristic string. The latter is uncountable, the former is also uncountable.)
+    * The set of TMs is countable but the set of languages is uncountable. So there are languages not described by TMs.
 
 ### Reducibility
 
