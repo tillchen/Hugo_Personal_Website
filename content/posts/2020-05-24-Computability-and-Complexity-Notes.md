@@ -28,6 +28,8 @@ tags = ["Computer Science"]
     * [NP-completeness](#np-completeness)
     * [Hierarchy Theorems](#hierarchy-theorems)
   * [Space Complexity](#space-complexity)
+    * [Measuring Space Complexity](#measuring-space-complexity)
+    * [PSPACE and Related Classes](#pspace-and-related-classes)
 * [References](#references)
 
 ## Introduction
@@ -307,6 +309,43 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 6. $P \subsetneq EXPTIME$. (Even if P=NP, there are problems of exponential runtime.)
 
 ### Space Complexity
+
+#### Measuring Space Complexity
+
+1. Space complexity is the maximum number of tape cells that are scanned by M for an arbitrary input o length n.
+
+2. SPACE(f(n)) is the set of all languages decided by $O(f(n))$ DTM.
+
+3. $SAT \in SPACE(n)$.
+
+4. NSAPCE is the set of all languages decided by $O(f(n))$ NTM.
+
+5. The language $ALL_{NFA}=\\{\langle A \rangle| \text{A is a NFA and } L(A) = \Sigma^*\\}$. $\overline{ALL_{NFA}} \in NSPACE(n)$
+
+6. f(n) at least $O(\log n)$. F is space constructible if a computable function exists that maps the string $1^n$ (the unary representation) to the binary representation of f(n) in space $O(f(n))$.
+
+7. Savitch's Theorem: $NSPACE(f(n)) \subseteq SPACE(f^2(n))$.
+    * Proof: Instead of calculating all branches, ask whether start config yields accepting config and check recursively, which leads to space reuse.
+
+#### PSPACE and Related Classes
+
+1. $P = \bigcup_{k \in \mathbb{N}_0} TIME(n^k)$
+
+2. $PSPACE = \bigcup_{k} SPACE(n^k)$ (deterministic)
+
+3. $NPSPACE = \bigcup_{k} SPACE(n^k)$ (non-deterministic)
+
+4. $PSPACE = NPSPACE$
+
+5. $P \subseteq PSPACE$ and $NP \subseteq NPSPACE$ and $NP \subseteq PSPACE$.
+
+6. PSPACE-complete if:
+    * $B \in PSPACE$ and
+    * $A \leq_p B$ for all $A \in PSPACE$ (only poly-time reduction; using poly-space would be as hard as the full class)
+
+7. The language $FQBF=\\{\langle F \rangle| \text{F is a true fully quantified Boolean formula}\\}$ is PSPACE-complete.
+
+8. $P \subseteq NP \subseteq PSPACE = NPSPACE \subset EXPTIME$ (one of this subsets have to be a proper subset due to $P \subsetneq EXPTIME$)
 
 ## References
 
