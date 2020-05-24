@@ -11,6 +11,9 @@ tags = ["Computer Science"]
   * [The Church-Turing Thesis](#the-church-turing-thesis)
     * [Turing Machines](#turing-machines)
     * [Variants of Turing Machines](#variants-of-turing-machines)
+      * [Mutlitape TM](#mutlitape-tm)
+      * [Nondeterministic TM](#nondeterministic-tm)
+      * [Random Access Machine](#random-access-machine)
   * [Decidability](#decidability)
   * [Reducibility](#reducibility)
 * [Complexity Theory](#complexity-theory)
@@ -76,6 +79,20 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
 9. Decidable/Recursive/Turing-decidable language: if there exists a TM (i.e. a decider) that decides it.
 
 #### Variants of Turing Machines
+
+1. All variants have the same power as a standard TM.
+
+##### Mutlitape TM
+
+1. The definition differs from the standard TM that: $\delta :Q\times \Gamma^k \rightarrow Q\times \Gamma^k \times \\{L,R\\}^k$
+
+2. For every multitape TM M, there exits a single-tape TM S that recognizes the same language.
+
+3. Turing-recognizable iff some multitape TM recognizes it.
+
+##### Nondeterministic TM
+
+##### Random Access Machine
 
 ### Decidability
 
