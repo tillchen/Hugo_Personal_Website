@@ -28,6 +28,16 @@ This is the course notes for Computability and Complexity by Prof. Dr. Peter Zas
 
 #### Turing Machines
 
+1. Formal definition of a TM:
+    * A Turing machine is a 7-tuple, $M=(Q,\Sigma,\Gamma,\delta,q_0,q_{accept},q_{reject})$, where $Q,\Sigma,\Gamma$ are all finite sets and
+      1. $Q$ is the set of states
+      2. $\Sigma$ is the input alphabet not containing the blank symbol $\sqcup$
+      3. $\Gamma$ is the tape alphabet, where $\sqcup \in \Gamma$ and $\Sigma \subseteq \Gamma$
+      4. $\delta :Q\times \Gamma \rightarrow Q\times \Gamma \times \\{L,R\\}$ is the transition function
+      5. $q_0 \in Q$ is the start state
+      6. $q_{accept} \in Q$ is the accept state, where $q_{accept} \neq q{reject}$
+      7. $q_{reject} \in Q$ is the reject state.
+
 #### Variants of Turing Machines
 
 ### Decidability
