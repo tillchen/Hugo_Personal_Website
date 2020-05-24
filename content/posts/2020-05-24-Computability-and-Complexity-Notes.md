@@ -24,6 +24,7 @@ tags = ["Computer Science"]
     * [Measuring Complexity](#measuring-complexity)
     * [The Class P](#the-class-p)
     * [The Class NP](#the-class-np)
+    * [Polynomial Time Reducibility](#polynomial-time-reducibility)
   * [Space Complexity](#space-complexity)
 * [References](#references)
 
@@ -255,6 +256,14 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 6. An alternative definition for NP: NP is the class of languages for which there exist polynomial time verifiers.
 
 7. There exists a polynomial time verifier for A iff there exists a nondeterministic polynomial time TM that recognizes A.
+
+8. A Hamiltonian path in G is a directed path that goes through each node exactly once. $HAMPATH \in NP$.
+
+9. A clique is a subgraph such that there exist edges between all paris of nodes. A k-clique is a clique with k vertices. $CLIQUE \in NP$
+
+10. $SUBSETSUM \in NP$
+
+#### Polynomial Time Reducibility
 
 ### Space Complexity
 
