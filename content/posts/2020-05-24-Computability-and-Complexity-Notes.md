@@ -329,23 +329,21 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### PSPACE and Related Classes
 
-1. $P = \bigcup_{k \in \mathbb{N}_0} TIME(n^k)$
+1. $PSPACE = \bigcup_{k} SPACE(n^k)$ (deterministic)
 
-2. $PSPACE = \bigcup_{k} SPACE(n^k)$ (deterministic)
+2. $NPSPACE = \bigcup_{k} SPACE(n^k)$ (non-deterministic)
 
-3. $NPSPACE = \bigcup_{k} SPACE(n^k)$ (non-deterministic)
+3. $PSPACE = NPSPACE$
 
-4. $PSPACE = NPSPACE$
+4. $P \subseteq PSPACE$ and $NP \subseteq NPSPACE$ and $NP \subseteq PSPACE$.
 
-5. $P \subseteq PSPACE$ and $NP \subseteq NPSPACE$ and $NP \subseteq PSPACE$.
-
-6. PSPACE-complete if:
+5. PSPACE-complete if:
     * $B \in PSPACE$ and
     * $A \leq_p B$ for all $A \in PSPACE$ (only poly-time reduction; using poly-space would be as hard as the full class)
 
-7. The language $FQBF=\\{\langle F \rangle| \text{F is a true fully quantified Boolean formula}\\}$ is PSPACE-complete.
+6. The language $FQBF=\\{\langle F \rangle| \text{F is a true fully quantified Boolean formula}\\}$ is PSPACE-complete.
 
-8. $P \subseteq NP \subseteq PSPACE = NPSPACE \subset EXPTIME$ (one of this subsets have to be a proper subset due to $P \subsetneq EXPTIME$)
+7. $P \subseteq NP \subseteq PSPACE = NPSPACE \subset EXPTIME$ (one of this subsets have to be a proper subset due to $P \subsetneq EXPTIME$)
 
 ## References
 
