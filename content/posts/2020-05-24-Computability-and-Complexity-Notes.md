@@ -302,7 +302,7 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 3. Let $f_1 \ f_2$ be time-constructible and $f_1(n) = o(f_2(n)/\log f_2(n))$, then $TIME(f_1(n)) \subsetneq TIME(f_2(n))$
 
-4. For $1 \leq \epsilon_1 < \epsilon_2$ and $n^{\epsilon_1}$ at least in $O(n\log n)$, it holds $TIME(f_1(n)) \subsetneq TIME(f_2(n))$
+4. For $1 \leq \epsilon_1 < \epsilon_2$ and $n^{\epsilon_1}$ at least in $O(n\log n)$, it holds $TIME(n^{\epsilon_1}) \subsetneq TIME(n^{\epsilon_2})$
 
 5. $EXPTIME = \bigcup_{k \in \mathbb{N}_0} TIME(2^{n^k})$.
 
