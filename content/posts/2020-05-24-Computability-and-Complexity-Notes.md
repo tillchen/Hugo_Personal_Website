@@ -174,11 +174,11 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 #### A Turing-Unrecognizable Language
 
-1. L is co-Turing-recognizable if $\bar L$ is Turing-recognizable.
+1. L is co-Turing-recognizable if $\overline L$ is Turing-recognizable.
 
 2. A language is decidable iff it's Turing-recognizable and co-Turing-recognizable. (Run two TMs in parallel.)
 
-3. The language $\bar{A_{TM}}$ is not Turing recognizable. (L is undecidable $\Rightarrow$ L not Turing recognizable $\vee$ $\bar L$ not Turing recognizable $\Rightarrow$ $\bar L$ not Turing recognizable)
+3. The language $\overline{A_{TM}}$ is not Turing recognizable. (L is undecidable $\Rightarrow$ L not Turing recognizable $\vee$ $\overline L$ not Turing recognizable $\Rightarrow$ $\overline L$ not Turing recognizable)
 
 ### Reducibility
 
