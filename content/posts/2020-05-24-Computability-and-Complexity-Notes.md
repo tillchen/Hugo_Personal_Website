@@ -65,7 +65,7 @@ The hypothesis that both are equal is called Church-Turing Thesis.
       * $q$ is the current state
       * $v$ is the current tape content **below** ($v_1$) **and to the right** of the head (being terminated by blanks $\sqcup$)
 
-3. A configuration $C_1$ **yields** a configuration $C_2$ if M can legally from $C_1$ to $C_2$ in a single step.
+3. A configuration $C_1$ **yields** a configuration $C_2$ if M can legally move from $C_1$ to $C_2$ in a single step.
     * Leftward move: $uaq_i bv$ yields $uq_j acv$ iff $\delta(q_i, b) = (q_j, c, L)$
     * Rightward move: $uaq_i bv$ yields $uacq_j v$ iff $\delta(q_i, b) = (q_j, c, R)$
     * L-move, left tape end: $q_i bv$ yields $q_j cv$ iff $\delta(q_i, b) = (q_j, c, L)$
@@ -190,7 +190,7 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 ### Reducibility
 
-1. The language $HALT_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M halts on input} w \\}$ is undecidable. (Proof by contradiction. Assume there's a decider R for $HALT_{TM}$. Construct a decider for $A_{TM}$ ("R rejects, reject" eliminates the loop case.))
+1. The language $HALT_{TM}=\\{\langle M,w \rangle| \text{M is a TM and M halts on input } w \\}$ is undecidable. (Proof by contradiction. Assume there's a decider R for $HALT_{TM}$. Construct a decider for $A_{TM}$ ("R rejects, reject" eliminates the loop case.))
 
 2. A Computable function f $\Rightarrow$ there exists some TM M, on every input w, halts with just f(w) on its tape.
 
@@ -343,7 +343,7 @@ The hypothesis that both are equal is called Church-Turing Thesis.
 
 6. The language $FQBF=\\{\langle F \rangle| \text{F is a true fully quantified Boolean formula}\\}$ is PSPACE-complete.
 
-7. $P \subseteq NP \subseteq PSPACE = NPSPACE \subset EXPTIME$ (one of this subsets have to be a proper subset due to $P \subsetneq EXPTIME$)
+7. $P \subseteq NP \subseteq PSPACE = NPSPACE \subseteq EXPTIME$ (one of this subsets have to be a proper subset due to $P \subsetneq EXPTIME$)
 
 ## References
 
