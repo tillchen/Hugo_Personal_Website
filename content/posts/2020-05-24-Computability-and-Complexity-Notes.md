@@ -341,7 +341,7 @@ The hypothesis that both are equal is called Church-Turing Thesis.
     * $B \in PSPACE$ and
     * $A \leq_p B$ for all $A \in PSPACE$ (only poly-time reduction; using poly-space would be as hard as the full class)
 
-6. The language $FQBF=\\{\langle F \rangle| \text{F is a true fully quantified Boolean formula}\\}$ is PSPACE-complete.
+6. The language $TQBF=\\{\langle F \rangle| \text{F is a true fully quantified Boolean formula}\\}$ is PSPACE-complete.
 
 7. $P \subseteq NP \subseteq PSPACE = NPSPACE \subseteq EXPTIME$ (one of this subsets have to be a proper subset due to $P \subsetneq EXPTIME$)
 
